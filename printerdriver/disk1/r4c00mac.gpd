@@ -1,0 +1,485 @@
+*%
+*%  Macro file
+*%    FileName: R4C00MAC.GPD
+*%
+*%    Copyright (c) 1999 - 2016  Microsoft Corp. & Ricoh Co., Ltd.
+*%    All rights reserved.
+*%
+
+*%======== Resource ========
+*Feature: RESDLL
+{
+    *Option: MyRes
+    { *Name: "r4c00lan.dll" }
+
+}
+
+*Macros: MyResStrings
+{
+    *%===== Media Type =============================
+    RC_STR_PLAIN:                   RESDLL.MyRes.100
+    RC_STR_RECYCLED:                RESDLL.MyRes.101
+    RC_STR_SPECIAL:                 RESDLL.MyRes.102
+    RC_STR_THICK:                   RESDLL.MyRes.103
+    RC_STR_THIN:                    RESDLL.MyRes.104
+    RC_STR_COLOR:                   RESDLL.MyRes.105
+    RC_STR_LETTERHEAD:              RESDLL.MyRes.106
+    RC_STR_LABELS:                  RESDLL.MyRes.107
+    RC_STR_PLAIN_RECYCLE:           RESDLL.MyRes.108
+    RC_STR_ENVELOPE:                RESDLL.MyRes.109
+    RC_STR_GLOSSY:                  RESDLL.MyRes.110
+    RC_STR_SPECIAL2:                RESDLL.MyRes.111
+    RC_STR_SPECIAL3:                RESDLL.MyRes.112
+    RC_STR_THICK2:                  RESDLL.MyRes.113
+    RC_STR_THICK3:                  RESDLL.MyRes.114
+    RC_STR_TRANSLUCENT:             RESDLL.MyRes.115
+    RC_STR_COLOR1:                  RESDLL.MyRes.116
+    RC_STR_COLOR2:                  RESDLL.MyRes.117
+    RC_STR_PREPRINTED:              RESDLL.MyRes.118
+    RC_STR_PREPUNCHED:              RESDLL.MyRes.119
+    RC_STR_BOND:                    RESDLL.MyRes.120
+    RC_STR_CARDSTOCK:               RESDLL.MyRes.121
+    RC_STR_TABSTOCK:                RESDLL.MyRes.122
+    RC_STR_YELLOW:                  RESDLL.MyRes.123
+    RC_STR_GREEN:                   RESDLL.MyRes.124
+    RC_STR_BLUE:                    RESDLL.MyRes.125
+    RC_STR_PURPLE:                  RESDLL.MyRes.126
+    RC_STR_IVORY:                   RESDLL.MyRes.127
+    RC_STR_ORANGE:                  RESDLL.MyRes.128
+    RC_STR_PINK:                    RESDLL.MyRes.129
+    RC_STR_RED:                     RESDLL.MyRes.130
+    RC_STR_GRAY:                    RESDLL.MyRes.131
+    RC_STR_MEDIA_BLACK:             RESDLL.MyRes.132
+    RC_STR_HGPLAIN:                 RESDLL.MyRes.133
+    RC_STR_MEDIA_POSTCARD:          RESDLL.MyRes.135
+    RC_STR_INKJET_POSTCARD:         RESDLL.MyRes.136
+    RC_STR_COATED:                  RESDLL.MyRes.137
+    RC_STR_MIDDLE_THICK:            RESDLL.MyRes.138
+    RC_STR_THICK1:                  RESDLL.MyRes.139
+    RC_STR_MEDIA_TYPE:              RESDLL.MyRes.140
+    RC_STR_MEDIA_AUTO:              RESDLL.MyRes.141
+    RC_STR_TRANSPARENCY:            RESDLL.MyRes.142
+    RC_STR_SPECIAL4:                RESDLL.MyRes.143
+    RC_STR_SPECIAL5:                RESDLL.MyRes.144
+    *%===== Staple (1) =============================
+    RC_STR_STAPLE:                  RESDLL.MyRes.200
+    RC_STR_2_AT_TOP:                RESDLL.MyRes.201
+    RC_STR_2_AT_LEFT:               RESDLL.MyRes.202
+    RC_STR_2_AT_RIGHT:              RESDLL.MyRes.203
+    RC_STR_TOP_LEFT:                RESDLL.MyRes.204
+    RC_STR_TOP_RIGHT:               RESDLL.MyRes.205
+    RC_STR_TOP_LEFT_SLANT:          RESDLL.MyRes.206
+    RC_STR_TOP_RIGHT_SLANT:         RESDLL.MyRes.207
+    *%===== Punch ==================================
+    RC_STR_PUNCH:                   RESDLL.MyRes.210
+    RC_STR_TOP:                     RESDLL.MyRes.211
+    RC_STR_LEFT:                    RESDLL.MyRes.212
+    RC_STR_RIGHT:                   RESDLL.MyRes.213
+    RC_STR_LEFTTOP1:                RESDLL.MyRes.214
+    RC_STR_TOP2:                    RESDLL.MyRes.215
+    RC_STR_LEFT2:                   RESDLL.MyRes.216
+    RC_STR_RIGHT2:                  RESDLL.MyRes.217
+    RC_STR_TOP3:                    RESDLL.MyRes.218
+    RC_STR_LEFT3:                   RESDLL.MyRes.219
+    RC_STR_RIGHT3:                  RESDLL.MyRes.220
+    *%===== Rotate by 180 degrees ==================
+    RC_STR_ROTETE_BY_180_DEGREES:   RESDLL.MyRes.230
+    *%===== Edge to Edge Print =====================
+    RC_STR_EDGE_TO_EDGE_PRINT:      RESDLL.MyRes.240
+    *%===== Resolution =============================
+    RC_STR_600_DPI:                 RESDLL.MyRes.250
+    RC_STR_300_DPI:                 RESDLL.MyRes.251
+    RC_STR_400_DPI:                 RESDLL.MyRes.252
+    RC_STR_1200_DPI:                RESDLL.MyRes.253
+    RC_STR_300_TO_600_DPI:          RESDLL.MyRes.254
+    RC_STR_RESOLUTION:              RESDLL.MyRes.255
+    *%===== Page Order =============================
+    RC_STR_PAGE_ORDER:              RESDLL.MyRes.260
+    RC_STR_FRONT_TO_BACK:           RESDLL.MyRes.261
+    RC_STR_BACK_TO_FRONT:           RESDLL.MyRes.262
+    *%===== Gray Reproduction ======================
+    RC_STR_GRAY_REPRODUCTION:       RESDLL.MyRes.270
+    RC_STR_BLACK:                   RESDLL.MyRes.271
+    RC_STR_BLACK_FOR_TEXT_ONLY:     RESDLL.MyRes.272
+    RC_STR_CMYK:                    RESDLL.MyRes.273
+    *%===== Layout =================================
+    RC_STR_PAGES_PER_SHEET:         RESDLL.MyRes.280
+    RC_STR_1:                       RESDLL.MyRes.281
+    RC_STR_2:                       RESDLL.MyRes.282
+    RC_STR_4:                       RESDLL.MyRes.283
+    RC_STR_6:                       RESDLL.MyRes.284
+    RC_STR_9:                       RESDLL.MyRes.285
+    RC_STR_16:                      RESDLL.MyRes.286
+    RC_STR_8:                       RESDLL.MyRes.287
+    *%===== Draw Border ============================
+    RC_STR_DRAW_BORDER:             RESDLL.MyRes.290
+    *%===== Booklet ================================
+    RC_STR_BOOKLET:                 RESDLL.MyRes.300
+    RC_STR_ON_LEFT_EDGE:            RESDLL.MyRes.301
+    RC_STR_ON_RIGHT_EDGE:           RESDLL.MyRes.302
+    RC_STR_MAGAZINE:                RESDLL.MyRes.303
+    *%===== Toner Saving ===========================
+    RC_STR_TONER_SAVING:            RESDLL.MyRes.310
+    *%===== Input Bin (1) ==========================
+    RC_STR_BYPASS_TRAY:             RESDLL.MyRes.320
+    RC_STR_TRAY1:                   RESDLL.MyRes.321
+    RC_STR_TRAY2:                   RESDLL.MyRes.322
+    RC_STR_TRAY3:                   RESDLL.MyRes.323
+    RC_STR_TRAY4:                   RESDLL.MyRes.324
+    *%===== Input Bin / Output Bin =================
+    RC_STR_PRINTER_DEFAULT:         RESDLL.MyRes.330
+    RC_STR_INPUT_BIN:               RESDLL.MyRes.331
+    RC_STR_OUTPUT_BIN:              RESDLL.MyRes.332
+    *%===== Collate ================================
+    RC_STR_COLLATE:                 RESDLL.MyRes.340
+    *%===== Print as Bitmap ========================
+    RC_STR_PRINT_AS_BITMAP:         RESDLL.MyRes.350
+    *%===== Feed Direction Printer Property ========
+    RC_STR_FEED_DIRECTION_BYPASS:   RESDLL.MyRes.401
+    RC_STR_FEED_DIRECTION_TRAY1:    RESDLL.MyRes.402
+    RC_STR_FEED_DIRECTION_TRAY2:    RESDLL.MyRes.403
+    RC_STR_FEED_DIRECTION_TRAY3:    RESDLL.MyRes.404
+    RC_STR_FEED_DIRECTION_TRAY4:    RESDLL.MyRes.405
+    RC_STR_LONG_EDGE_FEED:          RESDLL.MyRes.410
+    RC_STR_SHORT_EDGE_FEED:         RESDLL.MyRes.411
+    *%===== Paper Size =============================
+    RC_STR_8X13:                    RESDLL.MyRes.421
+    RC_STR_825X13:                  RESDLL.MyRes.422
+    RC_STR_8K:                      RESDLL.MyRes.423
+    RC_STR_16K:                     RESDLL.MyRes.424
+    RC_STR_A0:                      RESDLL.MyRes.425
+    RC_STR_A1:                      RESDLL.MyRes.426
+    RC_STR_B1:                      RESDLL.MyRes.427
+    RC_STR_B2:                      RESDLL.MyRes.428
+    RC_STR_B3:                      RESDLL.MyRes.429
+    RC_STR_12X18:                   RESDLL.MyRes.430
+    RC_STR_A2:                      RESDLL.MyRes.431
+    RC_STR_A3:                      RESDLL.MyRes.432
+    RC_STR_A4:                      RESDLL.MyRes.433
+    RC_STR_A5:                      RESDLL.MyRes.434
+    RC_STR_A6:                      RESDLL.MyRes.435
+    RC_STR_B4:                      RESDLL.MyRes.436
+    RC_STR_B5:                      RESDLL.MyRes.437
+    RC_STR_B6:                      RESDLL.MyRes.438
+    RC_STR_LEGAL:                   RESDLL.MyRes.439
+    RC_STR_11X17:                   RESDLL.MyRes.440
+    RC_STR_LETTER:                  RESDLL.MyRes.441
+    RC_STR_STATEMENT:               RESDLL.MyRes.442
+    RC_STR_EXECUTIVE:               RESDLL.MyRes.443
+    RC_STR_ENV_10:                  RESDLL.MyRes.444
+    RC_STR_ENV_DL:                  RESDLL.MyRes.445
+    RC_STR_ENV_MONARCH:             RESDLL.MyRes.446
+    RC_STR_ENV_C5:                  RESDLL.MyRes.447
+    RC_STR_ENV_C6:                  RESDLL.MyRes.448
+    RC_STR_85X13:                   RESDLL.MyRes.449
+    RC_STR_POSTCARD:                RESDLL.MyRes.450
+    RC_STR_DBL_POSTCARD_ROTATED:    RESDLL.MyRes.451
+    RC_STR_DBL_POSTCARD:            RESDLL.MyRes.452
+    *%===== Input Bin (2) ==========================
+    RC_STR_AUTO:                    RESDLL.MyRes.460
+    RC_STR_TRAY5:                   RESDLL.MyRes.461
+    RC_STR_TRAY6:                   RESDLL.MyRes.462
+    RC_STR_TRAY7:                   RESDLL.MyRes.463
+    RC_STR_LCT:                     RESDLL.MyRes.464
+    RC_STR_TRAY8:                   RESDLL.MyRes.465
+    RC_STR_TRAY9:                   RESDLL.MyRes.466
+    RC_STR_TRAY10:                  RESDLL.MyRes.467
+    RC_STR_TRAY11:                  RESDLL.MyRes.468
+    *%===== Staple (2) =============================
+    RC_STR_TOP_LEFT_SLANT_LESS:     RESDLL.MyRes.470
+    RC_STR_TOP_RIGHT_SLANT_LESS:    RESDLL.MyRes.471
+    RC_STR_2_AT_CENTER:             RESDLL.MyRes.472
+    RC_STR_2_AT_CENTER_REVERSE:     RESDLL.MyRes.473
+    RC_STR_2_AT_CENTER2:            RESDLL.MyRes.474
+    *%===== Output Bin =============================
+    RC_STR_INTERNAL:                RESDLL.MyRes.480
+    RC_STR_INTERNAL2:               RESDLL.MyRes.481
+    RC_STR_FIN_UPPER:               RESDLL.MyRes.482
+    RC_STR_FIN_SHIFT:               RESDLL.MyRes.483
+    RC_STR_FIN_BOOKLET:             RESDLL.MyRes.484
+    RC_STR_LEFT_TRAY:               RESDLL.MyRes.485
+    RC_STR_MAILBOX1:                RESDLL.MyRes.486
+    RC_STR_MAILBOX2:                RESDLL.MyRes.487
+    RC_STR_MAILBOX3:                RESDLL.MyRes.488
+    RC_STR_MAILBOX4:                RESDLL.MyRes.489
+    RC_STR_MAILBOX5:                RESDLL.MyRes.490
+    RC_STR_MAILBOX6:                RESDLL.MyRes.491
+    RC_STR_MAILBOX7:                RESDLL.MyRes.492
+    RC_STR_MAILBOX8:                RESDLL.MyRes.493
+    RC_STR_MAILBOX9:                RESDLL.MyRes.494
+    RC_STR_STACKER_PROOF:           RESDLL.MyRes.495
+    RC_STR_LARGE_STACKER:           RESDLL.MyRes.496
+    RC_STR_LARGE_STACKER2:          RESDLL.MyRes.497
+    RC_STR_LOADING_TRAY:            RESDLL.MyRes.498
+    RC_STR_RING_STACKER:            RESDLL.MyRes.499
+    *%===== Graphics Mode ==========================
+    RC_STR_GRAPHICS_MODE:           RESDLL.MyRes.520
+    RC_STR_VECTOR:                  RESDLL.MyRes.521
+    RC_STR_RASTER:                  RESDLL.MyRes.522
+    *%===== Printable Area =========================
+    RC_STR_PRINTABLE_AREA:          RESDLL.MyRes.530
+    RC_STR_REGULAR:                 RESDLL.MyRes.531
+    RC_STR_MAXIMUN:                 RESDLL.MyRes.532
+    RC_STR_RPDL:                    RESDLL.MyRes.533
+    *%===== Orientation ============================
+    RC_STR_ORIENTATION:             RESDLL.MyRes.540
+    RC_STR_PORTRAIT:                RESDLL.MyRes.541
+    RC_STR_LANDSCAPE:               RESDLL.MyRes.542
+    *%===== Duplex =================================
+    RC_STR_DUPLEX:                  RESDLL.MyRes.550
+    RC_STR_LONG_EDGE:               RESDLL.MyRes.551
+    RC_STR_SHORT_EDGE:              RESDLL.MyRes.552
+    *%===== Color Mode =============================
+    RC_STR_COLOR_MODE:              RESDLL.MyRes.560
+    RC_STR_MODE_COLOR:              RESDLL.MyRes.561
+    RC_STR_MODE_MONO:               RESDLL.MyRes.562
+    *%===== On / Off ===============================
+    RC_STR_OFF:                     RESDLL.MyRes.570
+    RC_STR_ON:                      RESDLL.MyRes.571
+    *%===== Media Type (2) =========================
+    RC_STR_PLAIN2:                  RESDLL.MyRes.580
+    RC_STR_THICK4:                  RESDLL.MyRes.582
+    RC_STR_COATED_GLOSSY:           RESDLL.MyRes.583
+    RC_STR_COATED_MATTE:            RESDLL.MyRes.584
+    RC_STR_WATER_PROOF:             RESDLL.MyRes.585
+    RC_STR_NCR:                     RESDLL.MyRes.586
+    *%===== Paper Size (2) =========================
+    RC_STR_85X13:                   RESDLL.MyRes.590
+    RC_STR_85X134:                  RESDLL.MyRes.591
+    RC_STR_ENV_YOUCHOU3:            RESDLL.MyRes.592
+    RC_STR_GOVERNMENTLG:            RESDLL.MyRes.593
+    RC_STR_ENGQUATRO:               RESDLL.MyRes.594
+    RC_STR_11X15:                   RESDLL.MyRes.595
+    RC_STR_SRA3:                    RESDLL.MyRes.596
+    RC_STR_SRA4:                    RESDLL.MyRes.597
+    RC_STR_85X12:                   RESDLL.MyRes.598
+    *%===== Toner Saving (2) =======================
+    RC_STR_TONER_SAVING1:           RESDLL.MyRes.600
+    RC_STR_TONER_SAVING2:           RESDLL.MyRes.601
+    *%===== Punch (2) ==============================
+    RC_STR_LEFT4:                   RESDLL.MyRes.610
+    RC_STR_TOP4:                    RESDLL.MyRes.611
+    RC_STR_RIGHT4:                  RESDLL.MyRes.612
+    RC_STR_LEFT_MULTI:              RESDLL.MyRes.613
+    RC_STR_TOP_MULTI:               RESDLL.MyRes.614
+    RC_STR_RIGHT_MULTI:             RESDLL.MyRes.615
+    RC_STR_LEFT_OR_TOP_DOUBLE:      RESDLL.MyRes.616
+    RC_STR_RIGHT_OR_TOP_DOUBLE:     RESDLL.MyRes.617
+    *%===== Output Bin (2) =========================
+    RC_STR_INTERNAL_SHIFT:          RESDLL.MyRes.620
+    RC_STR_FOLDING_UNIT:            RESDLL.MyRes.621
+    RC_STR_PERIPHERALS_IFBOX:       RESDLL.MyRes.622
+    *%===== Edge to Edge Print =====================
+    RC_STR_EDGE_TO_EDGE:            RESDLL.MyRes.630
+    *%===== Paper Size (3) =========================
+    RC_STR_226X310:                 RESDLL.MyRes.640
+    RC_STR_310X432:                 RESDLL.MyRes.641
+    RC_STR_10X15:                   RESDLL.MyRes.642
+    RC_STR_11X14:                   RESDLL.MyRes.643
+    RC_STR_126X185:                 RESDLL.MyRes.644
+    RC_STR_126X192:                 RESDLL.MyRes.645
+    RC_STR_13X18:                   RESDLL.MyRes.646
+    RC_STR_13X19:                   RESDLL.MyRes.647
+    RC_STR_13X192:                  RESDLL.MyRes.648
+    RC_STR_15X20:                   RESDLL.MyRes.649
+    RC_STR_18X24:                   RESDLL.MyRes.650
+    RC_STR_21X30:                   RESDLL.MyRes.651
+    RC_STR_24X36:                   RESDLL.MyRes.652
+    RC_STR_30X42:                   RESDLL.MyRes.653
+    RC_STR_329X483:                 RESDLL.MyRes.654
+    RC_STR_36X48:                   RESDLL.MyRes.655
+    RC_STR_9X12:                    RESDLL.MyRes.656
+    RC_STR_B7:                      RESDLL.MyRes.657
+    RC_STR_BD:                      RESDLL.MyRes.658
+    RC_STR_17X22:                   RESDLL.MyRes.659
+    RC_STR_22X34:                   RESDLL.MyRes.660
+    RC_STR_34X44:                   RESDLL.MyRes.661
+    RC_STR_8X105:                   RESDLL.MyRes.662
+    RC_STR_KIKU4:                   RESDLL.MyRes.663
+    RC_STR_LINSLIDER1:              RESDLL.MyRes.664
+    RC_STR_LINSLIDER2:              RESDLL.MyRes.665
+    RC_STR_POSTCARD_STANDARD:       RESDLL.MyRes.666
+    RC_STR_85X135:                  RESDLL.MyRes.667
+    RC_STR_B6HALF:                  RESDLL.MyRes.668
+    RC_STR_ISOB5:                   RESDLL.MyRes.669
+    *%===== Input Bin (2) ==========================
+    RC_STR_TRAY3_LCT:               RESDLL.MyRes.670
+    RC_STR_TRAYA:                   RESDLL.MyRes.671
+    RC_STR_ONESHEET_BYPASS_TRAY:    RESDLL.MyRes.672
+    RC_STR_FRONT_BYPASS_TRAY:       RESDLL.MyRes.673
+    RC_STR_PAPER_FEED_TRAY:         RESDLL.MyRes.674
+    *%===== Media Type (3) =========================
+    RC_STR_INKJETPLAIN:             RESDLL.MyRes.680
+    RC_STR_SPECIAL6:                RESDLL.MyRes.681
+    RC_STR_PLAIN_DUPLEX_BACKSIDE:   RESDLL.MyRes.682
+    RC_STR_THICK_DUPLEX_BACKSIDE:   RESDLL.MyRes.683
+    RC_STR_THICK_DUPLEX_BACKSIDE1:  RESDLL.MyRes.684
+    RC_STR_THICK_DUPLEX_BACKSIDE2:  RESDLL.MyRes.685
+    RC_STR_THICK_DUPLEX_BACKSIDE3:  RESDLL.MyRes.686
+    RC_STR_THICK_DUPLEX_BACKSIDE4:  RESDLL.MyRes.687
+    RC_STR_GLOSSYTABSTOCK:          RESDLL.MyRes.688
+    RC_STR_MATTABSTOCK:             RESDLL.MyRes.689
+    RC_STR_MOREGLOSSYTABSTOCK:      RESDLL.MyRes.690
+    RC_STR_SEMIGLOSSY:              RESDLL.MyRes.691
+    RC_STR_THICKGLOSSYCOATED:       RESDLL.MyRes.693
+    RC_STR_MATFILM:                 RESDLL.MyRes.694
+    RC_STR_THICKMATCOATED:          RESDLL.MyRes.695
+    RC_STR_GLOSSYENVELOPE:          RESDLL.MyRes.696
+    RC_STR_MATENVELOPE:             RESDLL.MyRes.697
+    RC_STR_MOREGLOSSYENVELOPE:      RESDLL.MyRes.698
+    RC_STR_CADCOATED:               RESDLL.MyRes.699
+    RC_STR_JPOST_DUPLEX_BACKSIDE:   RESDLL.MyRes.700
+    RC_STR_FILM:                    RESDLL.MyRes.701
+    RC_STR_CLEARFILE:               RESDLL.MyRes.702
+    RC_STR_MAGNET:                  RESDLL.MyRes.703
+    RC_STR_METALLICPEARL:           RESDLL.MyRes.704
+    RC_STR_SYNTHETIC:               RESDLL.MyRes.705
+    RC_STR_TEXTURE:                 RESDLL.MyRes.706
+    RC_STR_MEDIA_NONE:              RESDLL.MyRes.707
+    *%===== Resolution (2) =========================
+    RC_STR_200_DPI:                 RESDLL.MyRes.710
+    *%===== Output Bin (3) =========================
+    RC_STR_OUTBIN_STANDARD:         RESDLL.MyRes.720
+    RC_STR_OUTBIN_COPY:             RESDLL.MyRes.721
+    RC_STR_SHIFT:                   RESDLL.MyRes.722
+    RC_STR_FIN_SHIFT1:              RESDLL.MyRes.723
+    RC_STR_FIN_SHIFT2:              RESDLL.MyRes.724
+    RC_STR_FIN_SHIFT_SECOND:        RESDLL.MyRes.725
+    RC_STR_BOOKLET_PROCESSOR_TRAY:  RESDLL.MyRes.726
+    RC_STR_TRIMMER_TRAY:            RESDLL.MyRes.727
+    RC_STR_LEFT_TRAY1:              RESDLL.MyRes.728
+    RC_STR_LEFT_TRAY2:              RESDLL.MyRes.729
+    RC_STR_RIGHT_TRAY:              RESDLL.MyRes.730
+    RC_STR_MAILBOX_PROOF_TRAY:      RESDLL.MyRes.731
+    RC_STR_ONE_SHEET_OUTPUT_TRAY:   RESDLL.MyRes.732
+    RC_STR_STACKER_PROOF_TRAY2:     RESDLL.MyRes.733
+    RC_STR_LONG_STACKER_TRAY:       RESDLL.MyRes.734
+    RC_STR_UPPER_PAPER:             RESDLL.MyRes.735
+    RC_STR_FRONT_PAPER:             RESDLL.MyRes.736
+    RC_STR_LOWER_PAPER:             RESDLL.MyRes.737
+    RC_STR_REAR_PAPER:              RESDLL.MyRes.738
+    RC_STR_TWIN_LOOP_BIND_TRAY:     RESDLL.MyRes.739
+	*%===== Punch (3) ==============================
+    RC_STR_LEFT_OR_TOP_MULTI:       RESDLL.MyRes.740
+    RC_STR_RIGHT_OR_TOP_MULTI:      RESDLL.MyRes.741
+    *%===== Input Bin (3) ==========================
+    RC_STR_TRAY1_ROLL:              RESDLL.MyRes.750
+    RC_STR_TRAY2_ROLL:              RESDLL.MyRes.751
+    RC_STR_TRAY3_ROLL:              RESDLL.MyRes.752
+    RC_STR_TRAY4_ROLL:              RESDLL.MyRes.753
+    *%===== Output Bin (4) =========================
+    RC_STR_ANY_STACKER_TRAY:		RESDLL.MyRes.760
+    RC_STR_BOOKLET_PROCESSOR_TRAY2: RESDLL.MyRes.761
+    RC_STR_LONG_STACKER_TRAY2:      RESDLL.MyRes.762
+	*%===== Punch (5) ==============================
+    RC_STR_TOP_LEFT_HORIZONTAL:     RESDLL.MyRes.770
+    RC_STR_TOP_RIGHT_HORIZONTAL:    RESDLL.MyRes.771
+    RC_STR_TOP_LEFT_VERTICAL:       RESDLL.MyRes.772
+    RC_STR_TOP_RIGHT_VERTICAL:      RESDLL.MyRes.773
+     *%===== Media Type (4) =========================
+    RC_STR_SPECIALP:                RESDLL.MyRes.780
+    *%===== Output Bin (5) =========================
+    RC_STR_PROOF_PURGE_TRAY:        RESDLL.MyRes.790
+    *%===== Custom Media Type ======================
+    RC_STR_CUSTOM1:                 RESDLL.MyRes.1000
+    RC_STR_CUSTOM2:                 RESDLL.MyRes.1001
+    RC_STR_CUSTOM3:                 RESDLL.MyRes.1002
+    RC_STR_CUSTOM4:                 RESDLL.MyRes.1003
+    RC_STR_CUSTOM5:                 RESDLL.MyRes.1004
+    RC_STR_CUSTOM6:                 RESDLL.MyRes.1005
+    RC_STR_CUSTOM7:                 RESDLL.MyRes.1006
+    RC_STR_CUSTOM8:                 RESDLL.MyRes.1007
+    RC_STR_CUSTOM9:                 RESDLL.MyRes.1008
+    RC_STR_CUSTOM10:                RESDLL.MyRes.1009
+    RC_STR_CUSTOM11:                RESDLL.MyRes.1010
+    RC_STR_CUSTOM12:                RESDLL.MyRes.1011
+    RC_STR_CUSTOM13:                RESDLL.MyRes.1012
+    RC_STR_CUSTOM14:                RESDLL.MyRes.1013
+    RC_STR_CUSTOM15:                RESDLL.MyRes.1014
+    RC_STR_CUSTOM16:                RESDLL.MyRes.1015
+    RC_STR_CUSTOM17:                RESDLL.MyRes.1016
+    RC_STR_CUSTOM18:                RESDLL.MyRes.1017
+    RC_STR_CUSTOM19:                RESDLL.MyRes.1018
+    RC_STR_CUSTOM20:                RESDLL.MyRes.1019
+    RC_STR_CUSTOM21:                RESDLL.MyRes.1020
+    RC_STR_CUSTOM22:                RESDLL.MyRes.1021
+    RC_STR_CUSTOM23:                RESDLL.MyRes.1022
+    RC_STR_CUSTOM24:                RESDLL.MyRes.1023
+    RC_STR_CUSTOM25:                RESDLL.MyRes.1024
+    RC_STR_CUSTOM26:                RESDLL.MyRes.1025
+    RC_STR_CUSTOM27:                RESDLL.MyRes.1026
+    RC_STR_CUSTOM28:                RESDLL.MyRes.1027
+    RC_STR_CUSTOM29:                RESDLL.MyRes.1028
+    RC_STR_CUSTOM30:                RESDLL.MyRes.1029
+    RC_STR_CUSTOM31:                RESDLL.MyRes.1030
+    RC_STR_CUSTOM32:                RESDLL.MyRes.1031
+    RC_STR_CUSTOM33:                RESDLL.MyRes.1032
+    RC_STR_CUSTOM34:                RESDLL.MyRes.1033
+    RC_STR_CUSTOM35:                RESDLL.MyRes.1034
+    RC_STR_CUSTOM36:                RESDLL.MyRes.1035
+    RC_STR_CUSTOM37:                RESDLL.MyRes.1036
+    RC_STR_CUSTOM38:                RESDLL.MyRes.1037
+    RC_STR_CUSTOM39:                RESDLL.MyRes.1038
+    RC_STR_CUSTOM40:                RESDLL.MyRes.1039
+    RC_STR_CUSTOM41:                RESDLL.MyRes.1040
+    RC_STR_CUSTOM42:                RESDLL.MyRes.1041
+    RC_STR_CUSTOM43:                RESDLL.MyRes.1042
+    RC_STR_CUSTOM44:                RESDLL.MyRes.1043
+    RC_STR_CUSTOM45:                RESDLL.MyRes.1044
+    RC_STR_CUSTOM46:                RESDLL.MyRes.1045
+    RC_STR_CUSTOM47:                RESDLL.MyRes.1046
+    RC_STR_CUSTOM48:                RESDLL.MyRes.1047
+    RC_STR_CUSTOM49:                RESDLL.MyRes.1048
+    RC_STR_CUSTOM50:                RESDLL.MyRes.1049
+    RC_STR_CUSTOM51:                RESDLL.MyRes.1050
+    RC_STR_CUSTOM52:                RESDLL.MyRes.1051
+    RC_STR_CUSTOM53:                RESDLL.MyRes.1052
+    RC_STR_CUSTOM54:                RESDLL.MyRes.1053
+    RC_STR_CUSTOM55:                RESDLL.MyRes.1054
+    RC_STR_CUSTOM56:                RESDLL.MyRes.1055
+    RC_STR_CUSTOM57:                RESDLL.MyRes.1056
+    RC_STR_CUSTOM58:                RESDLL.MyRes.1057
+    RC_STR_CUSTOM59:                RESDLL.MyRes.1058
+    RC_STR_CUSTOM60:                RESDLL.MyRes.1059
+    RC_STR_CUSTOM61:                RESDLL.MyRes.1060
+    RC_STR_CUSTOM62:                RESDLL.MyRes.1061
+    RC_STR_CUSTOM63:                RESDLL.MyRes.1062
+    RC_STR_CUSTOM64:                RESDLL.MyRes.1063
+    RC_STR_CUSTOM65:                RESDLL.MyRes.1064
+    RC_STR_CUSTOM66:                RESDLL.MyRes.1065
+    RC_STR_CUSTOM67:                RESDLL.MyRes.1066
+    RC_STR_CUSTOM68:                RESDLL.MyRes.1067
+    RC_STR_CUSTOM69:                RESDLL.MyRes.1068
+    RC_STR_CUSTOM70:                RESDLL.MyRes.1069
+    RC_STR_CUSTOM71:                RESDLL.MyRes.1070
+    RC_STR_CUSTOM72:                RESDLL.MyRes.1071
+    RC_STR_CUSTOM73:                RESDLL.MyRes.1072
+    RC_STR_CUSTOM74:                RESDLL.MyRes.1073
+    RC_STR_CUSTOM75:                RESDLL.MyRes.1074
+    RC_STR_CUSTOM76:                RESDLL.MyRes.1075
+    RC_STR_CUSTOM77:                RESDLL.MyRes.1076
+    RC_STR_CUSTOM78:                RESDLL.MyRes.1077
+    RC_STR_CUSTOM79:                RESDLL.MyRes.1078
+    RC_STR_CUSTOM80:                RESDLL.MyRes.1079
+    RC_STR_CUSTOM81:                RESDLL.MyRes.1080
+    RC_STR_CUSTOM82:                RESDLL.MyRes.1081
+    RC_STR_CUSTOM83:                RESDLL.MyRes.1082
+    RC_STR_CUSTOM84:                RESDLL.MyRes.1083
+    RC_STR_CUSTOM85:                RESDLL.MyRes.1084
+    RC_STR_CUSTOM86:                RESDLL.MyRes.1085
+    RC_STR_CUSTOM87:                RESDLL.MyRes.1086
+    RC_STR_CUSTOM88:                RESDLL.MyRes.1087
+    RC_STR_CUSTOM89:                RESDLL.MyRes.1088
+    RC_STR_CUSTOM90:                RESDLL.MyRes.1089
+    RC_STR_CUSTOM91:                RESDLL.MyRes.1090
+    RC_STR_CUSTOM92:                RESDLL.MyRes.1091
+    RC_STR_CUSTOM93:                RESDLL.MyRes.1092
+    RC_STR_CUSTOM94:                RESDLL.MyRes.1093
+    RC_STR_CUSTOM95:                RESDLL.MyRes.1094
+    RC_STR_CUSTOM96:                RESDLL.MyRes.1095
+    RC_STR_CUSTOM97:                RESDLL.MyRes.1096
+    RC_STR_CUSTOM98:                RESDLL.MyRes.1097
+    RC_STR_CUSTOM99:                RESDLL.MyRes.1098
+    RC_STR_CUSTOM100:               RESDLL.MyRes.1099
+
+}

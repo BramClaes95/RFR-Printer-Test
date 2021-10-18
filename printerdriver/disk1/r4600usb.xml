@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<bidi:Schema xmlns:bidi="http://schemas.microsoft.com/windows/2010/09/printing/usbbidi">
+  <Property name='Printer'>
+    <Property name='Configuration'>
+      <Property name='CommonInfo'>
+          <Value name="data" type="BIDI_STRING" accessType="Get" queryKey="CommonInfo" refreshInterval="2147483647"/>
+          <Value name="id" type="BIDI_STRING" accessType="Get" queryKey="CommonInfo" refreshInterval="2147483647"/>
+      </Property>
+      <Property name='GenericInfo'>
+          <Value name="data" type="BIDI_STRING" accessType="Get" queryKey="GenericInfo" refreshInterval="2147483647"/>
+          <Value name="id" type="BIDI_STRING" accessType="Get" queryKey="GenericInfo" refreshInterval="2147483647"/>
+      </Property>
+      <Property name='GenericFunctionInfo'>
+          <Value name="data" type="BIDI_STRING" accessType="Get" queryKey="GenericFunctionInfo" refreshInterval="2147483647"/>
+          <Value name="id" type="BIDI_STRING" accessType="Get" queryKey="GenericFunctionInfo" refreshInterval="2147483647"/>
+      </Property>
+      <Property name='PostScriptInfo'>
+          <Value name="data" type="BIDI_STRING" accessType="Get" queryKey="PostScriptInfo" refreshInterval="2147483647"/>
+          <Value name="id" type="BIDI_STRING" accessType="Get" queryKey="PostScriptInfo" refreshInterval="2147483647"/>
+      </Property>
+      <Property name='CommonInfoController7'>
+          <Value name="data" type="BIDI_STRING" accessType="Get" queryKey="CommonInfoController7" refreshInterval="2147483647"/>
+          <Value name="id" type="BIDI_STRING" accessType="Get" queryKey="CommonInfoController7" refreshInterval="2147483647"/>
+      </Property>
+    </Property>
+    <Property name='Cache'>
+        <Value name="data" type="BIDI_STRING" accessType="Get" refreshInterval="2147483647"/>
+    </Property>
+  </Property>
+</bidi:Schema>
