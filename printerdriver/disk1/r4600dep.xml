@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Properties xmlns="http://schemas.microsoft.com/windows/2011/08/printing/devmodemap">
-  <Property Name="DocumentSettings">
-    <String Length="15360"></String>
-  </Property>
-</Properties>
-
