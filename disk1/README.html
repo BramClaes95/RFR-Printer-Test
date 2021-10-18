@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="description" content="Driver Document">
+<meta name="Author" content="RICOH CO., LTD.">
+<meta name="copyright" content="Copyright(C) 2016-2017 RICOH CO., LTD.">
+
+<style type="text/css">
+<!-- 
+PRE.title { font-weight: bold; font-size: x-large; text-align: center }
+PRE.eula  {
+    /* auto folding */
+    white-space: -moz-pre-wrap; /* Mozilla */
+    white-space: -pre-wrap;     /* Opera 4-6 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    white-space: pre-wrap;      /* CSS3 */
+    word-wrap: break-word;      /* IE 5.5+ */
+    font-family: sans-serif; font-size: small; text-align: center }
+PRE.note { font-size: x-small; text-align: center }
+PRE { font-family: sans-serif; font-size: small }
+H1 { font-size: x-large }
+H1.eula   { color: red; text-align: center }
+H2 { font-size: large }
+H2.eula { text-align: center }
+BODY { background-color: #f0f0ff; font-size: small }
+HR.fullwidth { border-width: 4; width: 100% }
+HR.semiwidth { border-width: 2; width: 80%; align: center }
+OL LI { list-style-type: decimal; }
+OL OL LI { list-style-type: lower-alpha; }
+-->
+</style>
+
+<TITLE>
+Readme
+</TITLE>
+</HEAD>
+<BODY>
+
+
+
+
+<h1><a name="Title_en"></a></h1>
+
+<pre class=title>
+PCL6 Printer Driver
+For Microsoft Windows
+</pre>
+
+
+
+
+<hr class=semiwidth>
+<h1 class=eula><a name="EULA_en">SOFTWARE LICENSE AGREEMENT</a></h1>
+
+<p><pre class=eula>
+YOU, THE END USER, SHALL USE THIS SOFTWARE("THE SOFTWARE") ACCORDING TO THE TERMS OF THIS AGREEMENT.
+BY LOADING THE SOFTWARE INTO ANY COMPUTER, YOU ARE AGREEING TO BE BOUND BY THESE TERMS. IF YOU DO NOT ACCEPT THE TERMS OF THIS AGREEMENT, YOU MAY NOT LOAD THIS SOFTWARE INTO ANY COMPUTER.
+</pre>
+</p>
+<h2 class=eula>Grant of License</h2>
+<pre class=eula>
+The Software is licensed for use by you for the equipment packaged with the Software or designated by its supplier ("the equipment"). You are permitted to use the Software on any computer which permits electronic access to the equipment. You are not permitted to rent or lease the Software or to transfer your rights under this license to a third party.
+</pre>
+
+
+<p><h2 class=eula>Acceptance</h2>
+<pre class=eula>
+You shall be deemed to have accepted the terms of this Agreement by loading the Software into any computer.
+</pre>
+</p>
+<h2 class=eula>Duration</h2>
+<pre class=eula>
+This license is effective until terminated. The license will terminate where you fail to comply with the terms of this Agreement. Upon termination, you agree to destroy all copies of the Software and its documentation. 
+</pre>
+
+<p><h2 class=eula>Ownership of Software</h2>
+<pre class=eula>
+You own, if any, only the magnetic media on which the Software has been delivered. It is an express condition of this Agreement that the title and ownership of the Software shall be retained by its owners.
+</pre>
+</p>
+<h2 class=eula>Copying</h2>
+<pre class=eula>
+The Software and its documentation are the subject of Copyright.
+You may not make any copies nor cause others to make copies of the Software except such copies as are necessary for licensed use and one copy for operational security. Any such copies are subject to the conditions of this Agreement.
+You may not modify, adapt, merge, translate, reverse engineer, decompile, disassemble or create derivative works based on the whole or any part of the Software or its associated documentation.
+You may be held legally responsible for any copyright infringement, unauthorized transfer, reproduction or use of the Software or its documentation.
+</pre>
+
+<p><h2 class=eula>Limitation of Warranty</h2>
+<pre class=eula>
+The media, if any, not the Software contained therein, is warranted to the original purchaser against defects in material and workmanship for a period of one year from the date of original purchase. Defective media will be replaced when it is returned to your supplier, postage prepaid, along with a copy of the purchase receipt.
+</p>
+THESE RIGHTS ARE YOUR SOLE AND EXCLUSIVE REMEDY, WHETHER IN TORT, CONTRACT, OR OTHERWISE. IN NO EVENT SHALL SUPPLIER, OWNER OF THE SOFTWARE OR ITS LICENSORS BE LIABLE FOR DAMAGES (INCLUDING ANY FOR LOSS OF INFORMATION, PROFITS, SAVINGS OR BUSINESS INTERRUPTION OR OTHER DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL OR SPECIAL DAMAGES) ARISING OUT OF THE SOFTWARE OR THE USE THEREOF, OR THE INABILITY TO USE THE SOFTWARE.
+</pre>
+
+<p><h2 class=eula>Exporting Law</h2>
+<pre class=eula>
+You acknowledge that the export of the Software is governed by the export control laws of the United States and other countries. You agree to comply with all such export control laws.
+</pre>
+</p>
+<h2 class=eula>Governing Law and Jurisdiction</h2>
+<pre class=eula>
+If any provision or portion of this Agreement shall be found to be illegal, invalid or unenforceable, the remaining provisions shall remain in full force and effect. This Agreement shall be governed by the laws of California, USA and is subject to the jurisdiction of the Federal District courts for the Central District of California by a judge and not a jury.
+</pre>
+
+
+
+
+<hr class=semiwidth>
+<h1><a name="Preface_en">Introduction</a></h1>
+
+<p><p>This file describes how to set up your printer driver and contains the most up-to-date information that was available at the time of software release. For information on the Printer Driver settings and features, please check the Help file.
+</p>
+</p>
+
+
+
+
+<hr class=semiwidth>
+<h1><a name="Index_en">Contents</a></h1>
+
+<p><h2><a href="#Environment_en">Supported operating systems</a></h2>
+<h2><a href="#Install_en">Getting started</a></h2>
+<ul>
+<li><a href="#NewInstall_en">Installing the printer driver</a> 
+<li><a href="#UpdateInstall_en">Upgrading the printer driver</a> 
+<li><a href="#Uninstall_en">Uninstalling the printer driver</a> 
+</ul>
+<h2><a href="#Limitations_en">Other important points</a></h2>
+</p>
+
+
+
+
+<hr class=semiwidth>
+<h1><a name="Environment_en">Supported operating systems</a></h1>
+
+<p><h2>32-bit architecture</h2>
+<ul>
+<li>Windows 8.1 Pro and Enterprise
+<li>Windows 10 Home, Pro, Enterprise, Education
+</ul>
+<h2>64-bit architecture</h2>
+<ul>
+<li>Windows 8.1 Pro and Enterprise
+<li>Windows Server 2012 Foundation, Essentials, and Standard
+<li>Windows Server 2012 R2 Foundation, Essentials, and Standard
+<li>Windows 10 Home, Pro, Enterprise, Education
+<li>Windows Server 2016 Essentials/Standard/Datacenter/MultiPoint Premium Server
+<li>Windows Server 2019 Essentials/Standard/Datacenter
+</ul>
+</p>
+
+
+
+
+<hr class=semiwidth>
+<h1><a name="Install_en">Getting Started</a></h1>
+
+<p><h2><a name="NewInstall_en">1) Installing the Printer Driver </a></h2>
+<strong>Notes:</strong> <br>
+All applications must be closed before installing or upgrading the driver.<br>
+This procedure requires administrator privileges (admin account or "Run as Administrator").<br>
+As the information contained in this document applies to multiple print devices, the word "device" is used as a generic reference to whichever device is being used.<br>
+<br>
+During installation, a dialog window will appear that will prompt for the generic name (PCL6 V4 Driver for Universal Print) or a version-specific name (RICOH PCL6 V4 UniversalDriver VX.X) of the driver. The version-specific name of the driver cannot be upgraded to a new version of the driver because the naming between the driver with the new version-specific name and the old one is different. Therefore, if there are plans to upgrade the driver to a later version in the future, please select the driver with the generic name.<br>
+
+
+<h3>(1)-1 For devices connected via USB</h3>
+
+<h4>(1)-1-1 Windows 8.1/10/Server 2012/Server 2012 R2/Server 2016/Server 2019</h4>
+<ol>
+<li>Connect the "Device" to a PC using a USB cable and then power on the "Device".
+<li>Automatic installation of the device driver will appear to start and then fail, displaying the message "Device driver software was not successfully installed". Close this message.
+<li>Open "Device Manager".
+<li>The "Device" should be listed under "Other devices". Right-click "Device" and select "Update Device Software...".
+<li>When the "Update Device Software" screen is displayed, select "Browse my computer for driver software".
+<li>Browse to the folder containing the driver files (typically the CD-ROM or an extracted archive downloaded from the website) and click "OK".
+<li>Follow the rest of the Wizard's instructions to complete the installation.
+</ol>
+
+<h3>(1)-2 For devices connected via network</h3>
+
+<h4>(1)-2-1 Windows 10/Server 2016/Server 2019</h4>
+
+<ol>
+<li>From the Start menu, select "Settings" > "Devices" > "Printers & scanners" > "Add printers & scanners" or select "All Apps" > "Windows System" > "Control Panel" > "View devices and printers" > "Add a printer".
+<li>When the window for adding a printer appears, displaying the message  "Searching for printers & scanners...", click "The printer that I want isn't listed".
+<li>In the "Find a printer by other options" window, select "Add a local printer or network printer with manual settings" and then click "Next".
+<li>In the "Choose a printer port" window, select "Create a new port:", choose "Standard TCP/IP Port" as the "Type of port:", and then click "Next". 
+<li>In the "Type a printer hostname or IP address" window, enter the hostname or IP address in "Hostname or IP address", uncheck "Query the printer and automatically select the driver to use", and then click "Next".
+<li>When the "Install the printer driver" window appears, click "Have Disk". 
+<li>Browse to the folder containing the driver files, which are typically on the device's installation from the website as an executable file, and then click "OK". 
+<li>Follow the wizard's instructions to complete the installation. 
+</ol>
+
+<h4>(1)-2-2 Windows 8.1/Server 2012/Server 2012 R2</h4>
+
+<ol>
+<li>From the Charms Bar, select Settings > Control Panel > View devices and printers > Add a printer.
+<li>When the "Add a Printer" window appears, displaying the message "Searching for available printer...", click "The printer that I want isn't listed".
+<li>In the "Find a printer by other options" window, select "Add a local printer or network printer with manual settings" and then click "Next".
+<li>In the "Choose a printer port" window, select "Create a new port:", choose "Standard TCP/IP Port" as the "Type of port:", and then click "Next". 
+<li>In the "Type a printer hostname or IP address" window, enter the hostname or IP address in "Hostname or IP address", uncheck "Query the printer and automatically select the driver to use", and then click "Next".
+<li>When the "Install the printer driver" window appears, click "Have Disk". 
+<li>Browse to the folder containing the driver files, which are typically on the device's installation from the website as an executable file, and then click "OK". 
+<li>Follow the wizard's instructions to complete the installation. 
+</ol>
+
+<hr class=semiwidth>
+<h2><a name="UpdateInstall_en">2) Upgrading the printer driver</a></h2>
+
+Please conduct the following procedure to upgrade the printer driver. This procedure requires administrator privileges. Close all applications before starting the upgrade process.<br>
+Attention: When upgrading the printer driver, the same printer driver name must be used.<br>
+<ol>
+<li>In the "Control Panel", navigate to "View devices and printers" and open "Devices and Printers". 
+<li>Open "Printer Properties" of the printer to be upgraded.
+<li>Select the "New Driver" button on the "Advanced" tab. In the "Add Printer Driver Wizard", click "Next".
+<li>Click "Have Disk". Browse to the INF file in the driver package, select it, and click "OK".
+<li>Select the appropriate manufacturer and printer and click "Next".
+<li>When the installation is complete, click "Finish".
+<li>Click "OK" to close "Printer Properties".
+<li>Log off and log on again. After completing this operation, the new version of the printer driver can be used.
+</ol>
+
+<p><hr class=semiwidth>
+<h2><a name="Uninstall_en">3) Uninstalling the printer driver </a></h2>
+</p>
+<strong>Note:</strong> This procedure requires administrator privileges (admin account or "Run as Administrator").
+
+<p><h3>3-1) Windows 8.1/10/Server 2012/Server 2012 R2/Server 2016/Server 2019</h3>
+</p>
+<ol>
+<li>Close all applications.
+<li>Open the "Printers" folder (or "Devices and Printers").
+<li>Delete the printer icon corresponding to the driver that is to be uninstalled.
+<li>Print server properties > "Driver" tab. 
+<li>Press the Change Driver Settings button.
+<li>Select the driver to be uninstalled.
+<li>Press the Remove key.
+<li>Press "Remove driver and driver package".
+<li>Restart the PC.
+</ol>
+
+<hr class=semiwidth>
+<h1><a name="Limitations_en">Other important points</a></h1>
+
+<p><h2><a name="">[General Issue]</a></h2>
+<ul>
+<li>In the case of specific application, only one part will be printed even if the combination of post-processing features and number of copies by from the driver set of multiple. Post-processing capability refers to the following items.<br>
+<ul>
+<li>Staple
+<li>Punch
+<li>Fold
+<li>Sort
+<li>Perfect Binding
+<li>Layout and Booklet etc.<br>
+The example of specific application : Microsoft Office<br>
+</ul>
+<li>In the environment to which the computer name is set by 16 bytes or more, the host name with banner page print is printed only up to 15 bytes.<br>
+<li>On some applications, the backside of a duplex page is incremented by the device counter. These applications add a blank page to the end of odd-paged duplex jobs. <br>
+<br>
+&nbsp;&nbsp;Workaround:<br>
+&nbsp;&nbsp;Specify the number of copies using the driver.
+<li>Use of Raster Mode with the Layout settings (= pages per sheet) may be printed roughly.<br>
+<br>
+&nbsp;&nbsp;Workaround:<br>
+&nbsp;&nbsp;Use Vector Mode in the PCL driver.<br>
+<li>If the registry and configuration files that are generated during driver installation are edited or deleted, the behavior of the driver is not guaranteed.<br>
+<li>It might take a significant amount time to open "More settings" in the Print Dialog in an application from the Windows Store.<br>
+<li>When enabling Poster, blank paper might be printed even if Do not Print Blank Pages is enabled.<br>
+<li>When selecting the file path in Windows Store applications, it is necessary to enter the path manually.<br>
+<li>The text settings of the Ricoh Driver Utility might behave in the following ways:
+<ol>
+<li>The text might be empty when entering double-byte characters.
+<li>The cursor position will return to the beginning of the input characters when entering text as a password by copying and pasting or copying by holding the SHIFT key.
+<li>The text will not change if copying and pasting a number of characters that exceed the maximum character limit.
+</ol>
+<li>The preview of the watermark will display even if the driver can't print the fonts as a watermark.
+<li>Print jobs may be canceled when specific data with including a lot of graphics data is printed.
+<li>When two or more printer drivers share the same USB port, USB bidirectional communication may fail.
+<li>Only the user who installed the printer driver can use the following functions.
+<ul>
+<li>Use "Printer Properties".</li>
+<li>Edit Shared "One Click Preset Name/Comment" on "Manage One Click Prest List".</li>
+<li>Register "One Click Preset" with "Do not Allow User to Register Preset",</li>
+</ul>
+</li>
+<li>If you specify the Web browser of the store application such as Microsoft Edge as the default application, if you try to refer to the help of the printer driver from that browser, the help page is displayed to yourself and you can not refer to the contents.<br>
+In that case, change the default Web browser or see the help of the printer driver from the desktop application.</li>
+<li>If the printer times out during printing and printing can not be performed, set the network timeout setting of the printer longer (300 seconds, etc.).</li>
+<li>When printing using [layout] and [page frame border] function, the underline of the border is printed thin.</li>
+<li>When printing using [Choose paper source by PDF page size] setting from the following applications, a different paper size from print setting might be used:<br>
+<ul>
+<li>Adobe Reader
+<li>Adobe Acrobat Reader DC
+</ul>
+In that case, change [Choose paper source by PDF page size] setting.
+</li>
+<li>The following issues occurred before the firmware update:<br>
+<ul>
+<li>When printing in Raster Mode, part of the document might be missing.
+<li>When printing with the Watermark function, the output of the watermark might be different from the preview.
+<li>When printing with the Front Cover function, only the front cover might be printed and not the rest of the document.
+<li>When printing with the Toner Save function, some images might be printed without toner saving.
+<li>When printing with both the Watermark and Toner Save functions, some characters might be printed in bold.
+<li>Network bidirectional communication might not work correctly for the DL Env. setting and the Custom Paper Size setting.
+</ul>
+Notes: Target devices and the fixed firmware versions:
+<ul>
+<li>SP 330DN/SP 3710DN/330DN/3710DN: v1.04 or later
+<li>SP 330SN/SP 330SFN/SP 3710SF/330SN/330SFN/3710SF: v1.04 or later
+<li>SP C262DNw/SP C261DNw/C262DNw/C261DNw: v1.12 or later
+<li>SP C262SFNw/SP C261SFNw/C262SFNw/C261SFNw: v1.15 or later
+</ul>
+</ul>
+</li>
+</ul>
+<h2><a name="">[OS/Windows Related Issues]</a></h2>
+<ul>
+<li>The "Web Image Monitor" button in the driver might not work in an IPv6 environment.
+<li>When "User Account Control: Admin Approval Mode for the Built-in Administrator account" is enabled in "Local Group Policy Editor", client-side rendering might not work when conducting Point and Print. Because of this, the functions that require user information such as "User ID", "User Code", and "Password" will not work.
+<li>In Windows 10 or Server 2016, after launching "More settings" in the Print Dialog in an application from the Windows Store, the application might lock up. If this occurs, restart the computer.
+<li>If Printing Preferences is launched soon after restarting the computer, the Windows standard UI might be displayed instead of the Ricoh extended UI. If this occurs, wait for a while and then relaunch Printing Preferences.
+<li>In Windows 10 or Server 2016, if the "Esc" key is pressed on the Store Device App launched from "More settings" in the Print Dialog in an application from the Windows Store, the setting values are saved and the screen is closed in the same manner as if the "OK" button were pressed.
+<li>The "Web Image Monitor" button in the driver might not work on Windows Server 2012 or 2012 R2.
+</ul>
+<h2><a name="">[Driver Setting Related Issues]</a></h2>
+<ul>
+<li>The number of copies specified using driver's may not work when printing from the following applications:<br>
+</p>
+<ul>
+<li>Adobe Reader
+<li>Adobe Acrobat
+<li>Adobe Illustrator
+<li>Adobe InDesign
+</ul>
+<br>
+&nbsp;&nbsp;Workaround:<br>
+&nbsp;&nbsp;Please specify the number of copies using the application's "Copies" setting.<br>
+<li>The use of Reverse Order is not supported with the Duplex, Front Cover, Back Cover, Chapter Pages, Slip Sheet functions.
+<li>If the Staple setting is "2 at Center" or if the "Reverse Order" setting is On, the driver will add an extra page to the end of odd-paged duplex jobs. The added page will be incremented in the printer's counter. There is no way to prevent this.
+<li>A paper mismatch error might occur when the measurement unit in the Custom Paper Size dialog is different from the Custom Size setting on the printer operation panel.
+<li>The paper size that is configured on the "Accessories" tab in the extended device properties is not reflected in "Paper available" on the "General" tab and the tray settings on the "Device Settings" tab in "Printer Properties". Please manually select a paper size in "Form to Tray Assignment" on the "Device Settings" tab in "Printer Properties" to configure the "Paper available" setting.
+<li>The default measurement unit is dependent on the system settings when the driver is opened.
+<li>A Windows login name cannot be displayed in the authentication settings in the Print Dialog in an application from the Windows Store.
+<li>Invalid characters entered in text boxes in the Print Dialog in an application from the Windows Store might appear briefly.
+<li>In Point and Print environments, the default settings for the following function are not inherited from the printer driver on the server:
+<ul>
+<li>"Job Setup": all
+<li>"Basic": "Print on" and "Reduce/Enlarge"
+<li>"Paper": Letterhead
+<li>"2sided/Layout/Booklet": "Page Order"
+<li>"Output Settings": Collate
+<li>"Print Quality: Advanced": "Print All Text as Black"
+<li>"Effects": all 
+<li>"Driver Options": all
+</ul>
+<li>In Point and Print environments, even a user with administrator privileges cannot register a One Click Preset in the Print Dialog in an application from the Windows Store. 
+<ul>
+<li>"Do not Allow User to Register Preset" is checked in Device Properties. 
+</ul>
+<li>When more than one printer is connected to the same port and those printers are consolidated into one icon, only the extended device properties of the most recently installed printer is displayed in the context menu of the icon. 
+<li>When Increase Auto-keep Settings for Applications is enabled, the driver inherits the printer settings of the first worksheet.
+<li>In the General tab in printer properties, the following features don’t match the actual settings:
+<ul>
+<li>Color
+<li>Double-sided
+<li>Staple
+</ul>
+<li>Tray 3 might be displayed instead of tray 3(LCT) when conducting bidirectional communication with generic models.
+<li>When printing with A0 or B0 paper size from Excel Mobile, the application will display "A file cannot be printed" dialog and cancel the print job.
+<li>Word Mobile will display a blank print preview screen and cancel the print job when selecting A0 as the paper size.
+<li>There is a difference between the actual paper size and the size displayed in Microsoft Office for the following paper sizes:
+<ul>
+<li>B3(364 mm x 515 mm) is displayed as "363.9 mm x 514.9 mm" in Microsoft Office.
+<li>SRA3(320 mm x 450 mm) is displayed as "319.9 mm x 449.9 mm" in Microsoft Office.
+<li>SRA4(225 mm x 320 mm) is displayed as "225 mm x 319.9 mm" in Microsoft Office.
+<li>8K(267 mm x 390 mm) is displayed as "266.9 mm x 389.9 mm" in Microsoft Office.
+<li>16K(195 mm x 267 mm) is displayed as "194.9 mm x 266.9 mm" in Microsoft Office.
+</ul>
+</ul>
+<h2><a name="">[Printing Issues]</a></h2>
+<ul>
+<li>Additional Page Count in Duplex Printing
+An extra page is added to the end of odd-paged duplex jobs. The added page might be incremented in the printer's counter.
+<li>Thin lines printed at high resolution (1200dpix1200dpi) might be difficult to see in the printed output. In such cases, use of a lower resolution is recommended.
+<li>Some shaded images may not be printed correctly when Raster Mode is used.<br>
+<br>
+&nbsp;&nbsp;Workaround:<br>
+&nbsp;&nbsp;Use Vector Mode in the PCL driver.
+<li>Depending on the combination of text and font settings for watermark, text might not be printed.<br>
+In such case, a change of font is recommended.
+<li>Excel Mobile cannot print mixed-size print data and custom paper sizes. In addition, print settings saved in Microsoft Excel will not be reflected in Microsoft Excel Mobile. 
+<li>Documents printed from Microsoft Excel are printed in a different position than Microsoft Excel Mobile.
+<li>Characters and figures may be printed as image data when using office mobile applications.
+<li>Blank pages might be printed from the following applications even if Do not Print Blank Pages is enabled:
+<ul>
+<li>Excel Mobile
+<li>PowerPoint Mobile
+</ul>
+<li>The color settings of some specific applications might not be reflected in the output.<br>
+&nbsp;&nbsp;Example: Adobe InDesign
+<li>When printing a PDF file with document size 11 x 17, the image may be cut off and printed.
+<li>If you can not print from Adobe Acrobat Reader DC, start up Adobe Acrobat Reader DC again.
+<li>Printed output from some specific windows store applications might be different from that of desktop applications.
+<ul>
+<li>Excel Mobile/Microsoft Excel
+<li>PowerPoint Mobile/Microsoft PowerPoint
+</ul>
+<li>The following applications cannot print mixed-direction print data.
+<ul>
+<li>Word Mobile/Excel Mobile/Microsoft Edge
+</ul>
+<li>Blank pages are printed from Microsoft Powerpoint even if Do not Print Blank Pages is enabled at the following models:
+<ul>
+<li>SP 330DN/SP 3710DN/330DN/3710DN
+<li>SP 330SN/SP 330SFN/SP 3710SF/330SN/330SFN/3710SF
+</ul>
+</li>
+<li>When printing using [16 Pages per Sheet] and [Draw Frame Border] function, the border line might not be printed at the following models:<br>
+<ul>
+<li>SP 330DN/SP 3710DN/330DN/3710DN
+<li>SP 330SN/SP 330SFN/SP 3710SF/330SN/330SFN/3710SF
+</ul>
+</ul>
+<h2><a name="">[B/W print with CMYK setting Issue]</a></h2>
+<ul>
+<li>If the "Color/ Black and White" setting  is "Color" some purely BW objects might be printed using CMYK toners (composite black). If the "Color/ Black and White" setting = "Black and White", all objects will be printed using K toner (pure black) only.
+</ul>
+<h2><a name="">[Matching with the Printer/MFP]</h2>
+<ul>
+<li>When printing from Photos and Reader, some print jobs might be canceled because of high memory usage.
+</ul>
+
+
+<hr class=semiwidth>
+<h1><a name="Trademarks_en"></a></h1>
+
+<p><p>All brand names and product names mentioned in this document are trademarks or registered trademarks of their respective companies. 
+</p
+</p>
+
+
+
+</BODY>
+</HTML>
+
+<!-- End of documents -->
+

@@ -1,0 +1,7197 @@
+*%    Copyright (c) 1999 - 2017  Microsoft Corp. & Ricoh Co., Ltd.
+*%    All rights reserved.
+
+*GPDFileVersion: "1.0"
+*GPDSpecVersion: "1.0"
+*Include:        "msxpsinc.gpd"
+*Include:        "StdNames.gpd"
+*Include:        "r4c00mac.gpd"
+*MasterUnits:    PAIR(1200, 1200)
+*ResourceDLL:    "unires.dll"
+*PrinterType:    PAGE
+*MaxCopies:      9999
+*PrintSchemaPrivateNamespaceURI: "http://schemas.ricoh.com/2007/printing/keywords"
+
+*%******************************************************************************
+*%                             Features Prototypes
+*%******************************************************************************
+
+*% **[DocFunction]**
+*Feature: PaperSize { }
+*Feature: MediaType { }
+*Feature: Orientation { }
+*Feature: ColorMode { }
+*Feature: Resolution { }
+*Feature: Duplex { }
+*Feature: Collate { }
+*Feature: PageOrder { }
+*Feature: InputBin { }
+*Feature: OutputBin { }
+*Feature: PagesPerSheet { }
+*Feature: Booklet { }
+*Feature: Stapling { }
+*Feature: Punching { }
+*Feature: ImageDirection { }
+*Feature: GraphicsMode { }
+*Feature: EdgeToEdgePrint { }
+*Feature: PrintableArea { }
+*%******************************************************************************
+*%                            PageMediaSize - Paper Size
+*%******************************************************************************
+*Feature: PaperSize
+{
+    *rcNameID: =PAPER_SIZE_DISPLAY
+    *DefaultOption: LETTER
+    *Option: A3
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(13628, 19440)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(14028, 19840)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(13471, 19360)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(13628, 19440)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: A4
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9520, 13628)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(9920, 14028)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9440, 13548)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9520, 13628)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: A5
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(6592, 9520)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(6992, 9920)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(6512, 9440)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(6592, 9520)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: A6
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(4560, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(4960, 6992)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(4480, 6512)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(4560, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: B4
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(11740, 16796)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(12140, 17196)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(11660, 16716)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(11740, 16796)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: B5
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(8196, 11740)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(8596, 12140)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(8118, 11660)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(8198, 11740)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }    
+    *Option: ISOB5
+    {
+        *rcNameID: =RC_STR_ISOB5
+        *PageDimensions: PAIR(8314, 11811)
+        *OptionID: 565
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(7916, 11416)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(8314, 11811)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: B6_JIS
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(5646, 8196)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(6046, 8596)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(5566, 8116)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(5646, 8196)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: JISB6Half
+    {
+        *rcNameID: =RC_STR_B6HALF
+        *PageDimensions: PAIR(3020, 8596)
+        *OptionID: 563
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(2620, 8196)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(3020, 8596)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: B7
+    {
+        *PrintSchemaKeywordMap: "JISB7"
+        *rcNameID: =RC_STR_B7
+        *PageDimensions: PAIR(4296, 6044)
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(3896, 5644)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(4296, 6044)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: LEGAL
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9800, 16400)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(10200, 16800)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9720, 16320)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9800, 16400)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 11X17
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(12800, 20000)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(13200, 20400)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(12720, 19920)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(12800, 20000)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: LETTER
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9800, 12800)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(10200, 13200)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9720, 12720)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9800, 12800)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: STATEMENT
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(6200, 9800)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(6600, 10200)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(6120, 9720)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(6200, 9800)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: EXECUTIVE
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(8300, 12200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(8700, 12600)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(8220, 12120)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(8300, 12200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: ENV_10
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(4548, 11000)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(4948, 11400)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(4468, 10920)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(4548, 11000)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: ENV_DL
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(4796, 9992)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(5196, 10392)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(4716, 9912)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(4796, 9992)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: ENV_MONARCH
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(4248, 8600)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(4648, 9000)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(4168, 8520)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(4248, 8600)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: ENV_C5
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(7252, 10416)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(7652, 10816)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(7172, 10336)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(7252, 10416)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: ENV_C6
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(4984, 7252)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(5384, 7652)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(4904, 7172)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(4984, 7252)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 12X18
+    {
+        *rcNameID: =RC_STR_12X18
+        *PageDimensions: PAIR(14400, 21600)
+        *OptionID: 512
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(14000, 21200)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(14400, 21600)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 8X13
+    {
+        *rcNameID: =RC_STR_8X13
+        *PageDimensions: PAIR(9600, 15600)
+        *OptionID: 518
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9200, 15200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(9600, 15600)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9120, 15120)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9200, 15200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 8_25X13
+    {
+        *rcNameID: =RC_STR_825X13
+        *PageDimensions: PAIR(9900, 15600)
+        *OptionID: 519
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9500, 15200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(9900, 15600)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9420, 15120)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9500, 15200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: FOLIO
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9800, 15200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(10200, 15600)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9720, 15120)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9800, 15200)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 8kai
+    {
+        *rcNameID: =RC_STR_8K
+        *PageDimensions: PAIR(12612, 18424)
+        *OptionID: 520
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(12212, 18024)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(12612, 18424)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(12132, 17944)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(12212, 18024)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 16kai
+    {
+        *rcNameID: =RC_STR_16K
+        *PageDimensions: PAIR(9212, 12612)
+        *OptionID: 521
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(8812, 12212)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(9212, 12612)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(8732, 12132)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(8812, 12212)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 8_5X13_4
+    {
+        *rcNameID: =RC_STR_85X134
+        *PageDimensions: PAIR(10200, 16076)
+        *OptionID: 551
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9800, 15676)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(10200, 16076)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9720, 15596)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9800, 15676)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 8_5X13_5
+    {
+        *rcNameID: =RC_STR_85X135
+        *PageDimensions: PAIR(10200, 16200)
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(9800, 15800)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(10200, 16200)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: FANFOLD_STD_GERMAN
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(9800, 14000)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(10200, 14400)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: JAPANESE_POSTCARD
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(4324, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(4724, 6992)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(4244, 6512)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(4324, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: DBL_JAPANESE_POSTCARD_ROTATED
+    {
+        *PrintSchemaKeywordMap: "JapanDoubleHagakiPostcardRotated"
+        *rcNameID: =RC_STR_DBL_POSTCARD_ROTATED
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(6592, 9048)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(6992, 9448)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(6512, 8968)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(6592, 9048)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: DBL_JAPANESE_POSTCARD
+    {
+        *PrintSchemaKeywordMap: "JapanDoubleHagakiPostcard"
+        *rcNameID: =RC_STR_DBL_POSTCARD
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9048, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(9448, 6992)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(8968, 6512)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9048, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: JENV_CHOU3
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(5268, 10700)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(5668, 11100)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(5188, 10622)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(5268, 10702)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: JENV_CHOU4
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(3848, 9284)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(4248, 9684)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(3768, 9204)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(3848, 9284)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: YouChou3
+    {
+        *rcNameID: =RC_STR_ENV_YOUCHOU3
+        *PageDimensions: PAIR(5668, 11100)
+        *OptionID: 540
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(5268, 10700)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(5668, 11100)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(5188, 10620)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(5268, 10700)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: JENV_YOU4
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(4560, 10700)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(4960, 11100)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(4480, 10620)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(4560, 10700)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: JENV_KAKU2
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(10936, 15284)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(11336, 15684)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+    *Option: JENV_KAKU3
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(9804, 12686)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(10204, 13086)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+*Endif:
+    *Option: 8_25X14
+    {
+        *rcNameID: =RC_STR_GOVERNMENTLG
+        *PageDimensions: PAIR(9900, 16800)
+        *OptionID: 522
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(9500, 16400)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(9900, 16800)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 8x10
+    {
+        *PrintSchemaKeywordMap: "NorthAmerica8x10"
+        *rcNameID: =RC_STR_ENGQUATRO
+        *PageDimensions: PAIR(9600, 12000)
+        *OptionID: 523
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(9200, 11600)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(9600, 12000)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 10X14
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(11600, 16400)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(12000, 16800)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 11X15
+    {
+        *rcNameID: =RC_STR_11X15
+        *PageDimensions: PAIR(13200, 18000)
+        *OptionID: 539
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(12800, 17600)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(13200, 18000)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 320X450
+    {
+        *rcNameID: =RC_STR_SRA3
+        *PageDimensions: PAIR(15116, 21258)
+        *OptionID: 530
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(14716, 20858)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15116, 21258)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 225X320
+    {
+        *rcNameID: =RC_STR_SRA4
+        *PageDimensions: PAIR(10628, 15116)
+        *OptionID: 531
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(10228, 14716)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(10628, 15116)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 226X310
+    {
+        *rcNameID: =RC_STR_226X310
+        *PageDimensions: PAIR(10677, 14645)
+        *OptionID: 532
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(10277, 14245)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(10677, 14645)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 310X432
+    {
+        *rcNameID: =RC_STR_310X432
+        *PageDimensions: PAIR(14645, 20409)
+        *OptionID: 533
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(14245, 20009)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(14645, 20409)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: PostcardStandard
+    {
+        *rcNameID: =RC_STR_POSTCARD_STANDARD
+        *PageDimensions: PAIR(5036, 6600)
+        *OptionID: 548
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(4636, 6200)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(5036, 6600)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: BD
+    {
+        *rcNameID: =RC_STR_BD
+        *PageDimensions: PAIR(8596, 9920)
+        *OptionID: 542
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(8196, 9520)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(8596, 9920)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: LineSlider1
+    {
+        *rcNameID: =RC_STR_LINSLIDER1
+        *PageDimensions: PAIR(8028, 9920)
+        *OptionID: 543
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(7628, 9520)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(8028, 9920)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: LineSlider2
+    {
+        *rcNameID: =RC_STR_LINSLIDER2
+        *PageDimensions: PAIR(9920, 16060)
+        *OptionID: 544
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(9520, 15660)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(9920, 16060)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 8X10_5
+    {
+        *rcNameID: =RC_STR_8X105
+        *PageDimensions: PAIR(9600, 12600)
+        *OptionID: 545
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(9200, 12200)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(9600, 12600)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 11X14
+    {
+        *rcNameID: =RC_STR_11X14
+        *PageDimensions: PAIR(13200, 16800)
+        *OptionID: 524
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(12800, 16400)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(13200, 16800)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 13X19_2
+    {
+        *rcNameID: =RC_STR_13X192
+        *PageDimensions: PAIR(15600, 23040)
+        *OptionID: 525
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(15200, 22640)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15600, 23040)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 13X19
+    {
+        *rcNameID: =RC_STR_13X19
+        *PageDimensions: PAIR(15600, 22800)
+        *OptionID: 526
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(15200, 22400)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15600, 22800)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 12_6X19_2
+    {
+        *rcNameID: =RC_STR_126X192
+        *PageDimensions: PAIR(15120, 23040)
+        *OptionID: 527
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(14720, 22640)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15120, 23040)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 12_6X18_5
+    {
+        *rcNameID: =RC_STR_126X185
+        *PageDimensions: PAIR(15120, 22200)
+        *OptionID: 528
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(14720, 21800)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15120, 22200)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 13X18
+    {
+        *rcNameID: =RC_STR_13X18
+        *PageDimensions: PAIR(15600, 21600)
+        *OptionID: 529
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(15200, 21200)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15600, 21600)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 10X15
+    {
+        *rcNameID: =RC_STR_10X15
+        *PageDimensions: PAIR(12000, 18000)
+        *OptionID: 546
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(11600, 17600)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(12000, 18000)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: Kiku4
+    {
+        *rcNameID: =RC_STR_KIKU4
+        *PageDimensions: PAIR(15020, 22156)
+        *OptionID: 549
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(14620, 21756)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15020, 22156)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 329X483
+    {
+        *rcNameID: =RC_STR_329X483
+        *PageDimensions: PAIR(15540, 22816)
+        *OptionID: 550
+        *switch: EdgeToEdgePrint
+        {
+            *case: Off
+            {
+                *PrintableArea: PAIR(15140, 22416)
+                *PrintableOrigin: PAIR(200, 200)
+            }
+            *case: EdgeToEdge
+            {
+                *PrintableArea: PAIR(15540, 22816)
+                *PrintableOrigin: PAIR(0, 0)
+            }
+        }
+    }
+    *Option: 8_5x13_6
+    {
+        *Name: "8.5 x 13.6"
+        *PageDimensions: PAIR(10200, 16320)
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9800, 15920)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(10200, 16320)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9720, 15840)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9800, 15920)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: 8_11x13_3
+    {
+        *Name: "8.11 x 13.3"
+        *PageDimensions: PAIR(9732, 15960)
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9332, 15560)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(9732, 15960)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9252, 15480)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9332, 15560)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+    *Option: A5_ROTATED
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *switch: EdgeToEdgeSupport
+        {
+            *case: ON
+            {
+                *switch: EdgeToEdgePrint
+                {
+                    *case: Off
+                    {
+                        *PrintableArea: PAIR(9520, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                    *case: EdgeToEdge
+                    {
+                        *PrintableArea: PAIR(9920, 6992)
+                        *PrintableOrigin: PAIR(0, 0)
+                    }
+                }
+            }
+            *case: OFF
+            {
+                *switch: PrintableArea
+                {
+                    *case: Regular
+                    {
+                        *PrintableArea: PAIR(9440, 6512)
+                        *PrintableOrigin: PAIR(240, 240)
+                    }
+                    *case: Enlargedmargin2
+                    {
+                        *PrintableArea: PAIR(9520, 6592)
+                        *PrintableOrigin: PAIR(200, 200)
+                    }
+                }
+            }
+        }
+    }
+*Ifdef: EXP_MODEL
+    *Option: CUSTOMSIZE
+    {
+        *rcNameID: =USER_DEFINED_SIZE_DISPLAY
+        *MinSize: PAIR(3023, 5905)      *%%% (64.0mm, 125.0mm)
+        *MaxSize: PAIR(15600, 59528)    *%%% (330.2mm, 1260.0mm)
+        *MaxPrintableWidth: 15600
+        *MinLeftMargin: 0
+        *CenterPrintable?: FALSE
+    }
+*Else:
+    *Option: CUSTOMSIZE
+    {
+        *rcNameID: =USER_DEFINED_SIZE_DISPLAY
+        *MinSize: PAIR(3023, 4251)      *%%% (64.0mm, 90.0mm)
+        *MaxSize: PAIR(15600, 59528)    *%%% (330.2mm, 1260.0mm)
+        *MaxPrintableWidth: 15600
+        *MinLeftMargin: 0
+        *CenterPrintable?: FALSE
+    }
+*Endif:
+}
+*%******************************************************************************
+*%                               MediaType
+*%******************************************************************************
+*Feature: MediaType
+{
+    *PrintSchemaKeywordMap: "PageMediaType"
+    *rcNameID: =RC_STR_MEDIA_TYPE
+    *DefaultOption: Standard_Recycled
+    *Option: Standard_Recycled
+    {
+        *rcNameID: =RC_STR_PLAIN_RECYCLE
+        *OptionID: 512
+    }
+    *Option: STANDARD
+    {
+        *PrintSchemaKeywordMap: "Plain"
+        *rcNameID: =RC_STR_PLAIN
+    }
+    *Option: Plain2
+    {
+        *rcNameID: =RC_STR_PLAIN2
+        *OptionID: 513
+    }
+    *Option: Recycled
+    {
+        *rcNameID: =RC_STR_RECYCLED
+        *OptionID: 514
+    }
+    *Option: Special
+    {
+        *rcNameID: =RC_STR_SPECIAL
+        *OptionID: 515
+    }
+    *Option: Special2
+    {
+        *rcNameID: =RC_STR_SPECIAL2
+        *OptionID: 516
+    }
+    *Option: Special3
+    {
+        *rcNameID: =RC_STR_SPECIAL3
+        *OptionID: 517
+    }
+    *Option: Special4
+    {
+        *rcNameID: =RC_STR_SPECIAL4
+        *OptionID: 518
+    }
+    *Option: Special5
+    {
+        *rcNameID: =RC_STR_SPECIAL5
+        *OptionID: 519
+    }
+    *Option: Special6
+    {
+        *rcNameID: =RC_STR_SPECIAL6
+        *OptionID: 520
+    }
+    *Option: MiddleThick
+    {
+        *rcNameID: =RC_STR_MIDDLE_THICK
+        *OptionID: 522
+    }
+    *Option: Thick
+    {
+        *rcNameID: =RC_STR_THICK
+        *OptionID: 521
+    }
+    *Option: Thick2
+    {
+        *rcNameID: =RC_STR_THICK2
+        *OptionID: 523
+    }
+    *Option: Thick3
+    {
+        *rcNameID: =RC_STR_THICK3
+        *OptionID: 524
+    }
+    *Option: Thick4
+    {
+        *rcNameID: =RC_STR_THICK4
+        *OptionID: 525
+    }
+    *Option: Thin
+    {
+        *rcNameID: =RC_STR_THIN
+        *OptionID: 526
+    }
+    *Option: TRANSPARENCY
+    {
+        *PrintSchemaKeywordMap: "Transparency"
+        *rcNameID: =RC_STR_TRANSPARENCY
+    }
+    *Option: Translucent
+    {
+        *rcNameID: =RC_STR_TRANSLUCENT
+        *OptionID: 527
+    }
+    *Option: Color
+    {
+        *rcNameID: =RC_STR_COLOR
+        *OptionID: 528
+    }
+    *Option: Color1
+    {
+        *rcNameID: =RC_STR_COLOR1
+        *OptionID: 529
+    }
+    *Option: Color2
+    {
+        *rcNameID: =RC_STR_COLOR2
+        *OptionID: 530
+    }
+    *Option: Letterhead
+    {
+        *rcNameID: =RC_STR_LETTERHEAD
+        *OptionID: 531
+    }
+    *Option: Preprinted
+    {
+        *rcNameID: =RC_STR_PREPRINTED
+        *OptionID: 532
+    }
+    *Option: Plain_Duplex_Backside
+    {
+        *rcNameID: =RC_STR_PLAIN_DUPLEX_BACKSIDE
+        *OptionID: 533
+    }
+    *Option: Thick_Duplex_Backside
+    {
+        *rcNameID: =RC_STR_THICK_DUPLEX_BACKSIDE
+        *OptionID: 534
+    }
+    *Option: Thick_Duplex_Backside2
+    {
+        *rcNameID: =RC_STR_THICK_DUPLEX_BACKSIDE2
+        *OptionID: 535
+    }
+    *Option: Thick_Duplex_Backside3
+    {
+        *rcNameID: =RC_STR_THICK_DUPLEX_BACKSIDE3
+        *OptionID: 536
+    }
+    *Option: Thick_Duplex_Backside4
+    {
+        *rcNameID: =RC_STR_THICK_DUPLEX_BACKSIDE4
+        *OptionID: 537
+    }
+    *Option: Prepunched
+    {
+        *rcNameID: =RC_STR_PREPUNCHED
+        *OptionID: 538
+    }
+    *Option: Labels
+    {
+        *PrintSchemaKeywordMap: "Label"
+        *rcNameID: =RC_STR_LABELS
+        *OptionID: 539
+    }
+    *Option: Bond
+    {
+        *PrintSchemaKeywordMap: "Bond"
+        *rcNameID: =RC_STR_BOND
+        *OptionID: 540
+    }
+    *Option: CardStock
+    {
+        *PrintSchemaKeywordMap: "CardStock"
+        *rcNameID: =RC_STR_CARDSTOCK
+        *OptionID: 541
+    }
+    *Option: TabStockPreCut
+    {
+        *PrintSchemaKeywordMap: "TabStockPreCut"
+        *rcNameID: =RC_STR_TABSTOCK
+        *OptionID: 542
+    }
+    *Option: GlossyTabStock
+    {
+        *rcNameID: =RC_STR_GLOSSYTABSTOCK
+        *OptionID: 585
+    }
+    *Option: MatTabStock
+    {
+        *rcNameID: =RC_STR_MATTABSTOCK
+        *OptionID: 586
+    }
+    *Option: MoreGlossyTabStock
+    {
+        *rcNameID: =RC_STR_MOREGLOSSYTABSTOCK
+        *OptionID: 587
+    }
+    *Option: Yellow
+    {
+        *rcNameID: =RC_STR_YELLOW
+        *OptionID: 543
+    }
+    *Option: Green
+    {
+        *rcNameID: =RC_STR_GREEN
+        *OptionID: 544
+    }
+    *Option: Blue
+    {
+        *rcNameID: =RC_STR_BLUE
+        *OptionID: 545
+    }
+    *Option: Purple
+    {
+        *rcNameID: =RC_STR_PURPLE
+        *OptionID: 546
+    }
+    *Option: Ivory
+    {
+        *rcNameID: =RC_STR_IVORY
+        *OptionID: 547
+    }
+    *Option: Orange
+    {
+        *rcNameID: =RC_STR_ORANGE
+        *OptionID: 548
+    }
+    *Option: Pink
+    {
+        *rcNameID: =RC_STR_PINK
+        *OptionID: 549
+    }
+    *Option: Red
+    {
+        *rcNameID: =RC_STR_RED
+        *OptionID: 550
+    }
+    *Option: Gray
+    {
+        *rcNameID: =RC_STR_GRAY
+        *OptionID: 551
+    }
+    *Option: Black
+    {
+        *rcNameID: =RC_STR_MEDIA_BLACK
+        *OptionID: 573
+    }
+    *Option: GLOSSY
+    {
+        *PrintSchemaKeywordMap: "PhotographicGlossy"
+        *rcNameID: =RC_STR_GLOSSY
+    }
+    *Option: GlossyCoated
+    {
+        *rcNameID: =RC_STR_COATED_GLOSSY
+        *OptionID: 552
+    }
+    *Option: ThickGlossyCoated
+    {
+        *rcNameID: =RC_STR_THICKGLOSSYCOATED
+        *OptionID: 554
+    }
+    *Option: MatCoated
+    {
+        *rcNameID: =RC_STR_COATED_MATTE
+        *OptionID: 555
+    }
+    *Option: ThickMatCoated
+    {
+        *rcNameID: =RC_STR_THICKMATCOATED
+        *OptionID: 556
+    }
+    *Option: WaterProof
+    {
+        *rcNameID: =RC_STR_WATER_PROOF
+        *OptionID: 557
+    }
+    *Option: HGPlain
+    {
+        *rcNameID: =RC_STR_HGPLAIN
+        *OptionID: 558
+    }
+    *Option: Envelope
+    {
+        *PrintSchemaKeywordMap: "EnvelopePlain"
+        *rcNameID: =RC_STR_ENVELOPE
+        *OptionID: 559
+    }
+    *Option: GlossyEnvelope
+    {
+        *rcNameID: =RC_STR_GLOSSYENVELOPE
+        *OptionID: 588
+    }
+    *Option: MatEnvelope
+    {
+        *rcNameID: =RC_STR_MATENVELOPE
+        *OptionID: 589
+    }
+    *Option: MoreGlossyEnvelope
+    {
+        *rcNameID: =RC_STR_MOREGLOSSYENVELOPE
+        *OptionID: 590
+    }
+    *Option: Jpost
+    {
+        *rcNameID: =RC_STR_MEDIA_POSTCARD
+        *OptionID: 560
+    }
+    *Option: InkjetJpost
+    {
+        *rcNameID: =RC_STR_INKJET_POSTCARD
+        *OptionID: 561
+    }
+    *Option: Coated
+    {
+        *rcNameID: =RC_STR_COATED
+        *OptionID: 562
+    }
+    *Option: Jpost_Duplex_Backside
+    {
+        *rcNameID: =RC_STR_JPOST_DUPLEX_BACKSIDE
+        *OptionID: 563
+    }
+    *Option: ClearFile
+    {
+        *rcNameID: =RC_STR_CLEARFILE
+        *OptionID: 574
+    }
+    *Option: Magnet
+    {
+        *rcNameID: =RC_STR_MAGNET
+        *OptionID: 575
+    }
+    *Option: MetallicPearl
+    {
+        *rcNameID: =RC_STR_METALLICPEARL
+        *OptionID: 576
+    }
+    *Option: Synthetic
+    {
+        *rcNameID: =RC_STR_SYNTHETIC
+        *OptionID: 577
+    }
+    *Option: Texture
+    {
+        *rcNameID: =RC_STR_TEXTURE
+        *OptionID: 578
+    }    
+    *Option: NCR
+    {
+        *rcNameID: =RC_STR_NCR
+        *OptionID: 579
+    }
+    *Option: SpecialP
+    {
+        *rcNameID: =RC_STR_SPECIALP
+        *OptionID: 591
+    }
+    *Option: Auto
+    {
+        *PrintSchemaKeywordMap: "AutoSelect"
+        *%*rcNameID: =HT_AUTO_SELECT_DISPLAY
+        *Name: "Auto Select"
+        *OptionID: 565
+    }
+    *Option: Custom1
+    {
+        *rcNameID: =RC_STR_CUSTOM1
+        *OptionID: 256
+    }
+    *Option: Custom2
+    {
+        *rcNameID: =RC_STR_CUSTOM2
+        *OptionID: 257
+    }
+    *Option: Custom3
+    {
+        *rcNameID: =RC_STR_CUSTOM3
+        *OptionID: 258
+    }
+    *Option: Custom4
+    {
+        *rcNameID: =RC_STR_CUSTOM4
+        *OptionID: 259
+    }
+    *Option: Custom5
+    {
+        *rcNameID: =RC_STR_CUSTOM5
+        *OptionID: 260
+    }
+    *Option: Custom6
+    {
+        *rcNameID: =RC_STR_CUSTOM6
+        *OptionID: 261
+    }
+    *Option: Custom7
+    {
+        *rcNameID: =RC_STR_CUSTOM7
+        *OptionID: 262
+    }
+    *Option: Custom8
+    {
+        *rcNameID: =RC_STR_CUSTOM8
+        *OptionID: 263
+    }
+    *Option: Custom9
+    {
+        *rcNameID: =RC_STR_CUSTOM9
+        *OptionID: 264
+    }
+    *Option: Custom10
+    {
+        *rcNameID: =RC_STR_CUSTOM10
+        *OptionID: 265
+    }
+    *Option: Custom11
+    {
+        *rcNameID: =RC_STR_CUSTOM11
+        *OptionID: 266
+    }
+    *Option: Custom12
+    {
+        *rcNameID: =RC_STR_CUSTOM12
+        *OptionID: 267
+    }
+    *Option: Custom13
+    {
+        *rcNameID: =RC_STR_CUSTOM13
+        *OptionID: 268
+    }
+    *Option: Custom14
+    {
+        *rcNameID: =RC_STR_CUSTOM14
+        *OptionID: 269
+    }
+    *Option: Custom15
+    {
+        *rcNameID: =RC_STR_CUSTOM15
+        *OptionID: 270
+    }
+    *Option: Custom16
+    {
+        *rcNameID: =RC_STR_CUSTOM16
+        *OptionID: 271
+    }
+    *Option: Custom17
+    {
+        *rcNameID: =RC_STR_CUSTOM17
+        *OptionID: 272
+    }
+    *Option: Custom18
+    {
+        *rcNameID: =RC_STR_CUSTOM18
+        *OptionID: 273
+    }
+    *Option: Custom19
+    {
+        *rcNameID: =RC_STR_CUSTOM19
+        *OptionID: 274
+    }
+    *Option: Custom20
+    {
+        *rcNameID: =RC_STR_CUSTOM20
+        *OptionID: 275
+    }
+    *Option: Custom21
+    {
+        *rcNameID: =RC_STR_CUSTOM21
+        *OptionID: 276
+    }
+    *Option: Custom22
+    {
+        *rcNameID: =RC_STR_CUSTOM22
+        *OptionID: 277
+    }
+    *Option: Custom23
+    {
+        *rcNameID: =RC_STR_CUSTOM23
+        *OptionID: 278
+    }
+    *Option: Custom24
+    {
+        *rcNameID: =RC_STR_CUSTOM24
+        *OptionID: 279
+    }
+    *Option: Custom25
+    {
+        *rcNameID: =RC_STR_CUSTOM25
+        *OptionID: 280
+    }
+    *Option: Custom26
+    {
+        *rcNameID: =RC_STR_CUSTOM26
+        *OptionID: 281
+    }
+    *Option: Custom27
+    {
+        *rcNameID: =RC_STR_CUSTOM27
+        *OptionID: 282
+    }
+    *Option: Custom28
+    {
+        *rcNameID: =RC_STR_CUSTOM28
+        *OptionID: 283
+    }
+    *Option: Custom29
+    {
+        *rcNameID: =RC_STR_CUSTOM29
+        *OptionID: 284
+    }
+    *Option: Custom30
+    {
+        *rcNameID: =RC_STR_CUSTOM30
+        *OptionID: 285
+    }
+    *Option: Custom31
+    {
+        *rcNameID: =RC_STR_CUSTOM31
+        *OptionID: 286
+    }
+    *Option: Custom32
+    {
+        *rcNameID: =RC_STR_CUSTOM32
+        *OptionID: 287
+    }
+    *Option: Custom33
+    {
+        *rcNameID: =RC_STR_CUSTOM33
+        *OptionID: 288
+    }
+    *Option: Custom34
+    {
+        *rcNameID: =RC_STR_CUSTOM34
+        *OptionID: 289
+    }
+    *Option: Custom35
+    {
+        *rcNameID: =RC_STR_CUSTOM35
+        *OptionID: 290
+    }
+    *Option: Custom36
+    {
+        *rcNameID: =RC_STR_CUSTOM36
+        *OptionID: 291
+    }
+    *Option: Custom37
+    {
+        *rcNameID: =RC_STR_CUSTOM37
+        *OptionID: 292
+    }
+    *Option: Custom38
+    {
+        *rcNameID: =RC_STR_CUSTOM38
+        *OptionID: 293
+    }
+    *Option: Custom39
+    {
+        *rcNameID: =RC_STR_CUSTOM39
+        *OptionID: 294
+    }
+    *Option: Custom40
+    {
+        *rcNameID: =RC_STR_CUSTOM40
+        *OptionID: 295
+    }
+    *Option: Custom41
+    {
+        *rcNameID: =RC_STR_CUSTOM41
+        *OptionID: 296
+    }
+    *Option: Custom42
+    {
+        *rcNameID: =RC_STR_CUSTOM42
+        *OptionID: 297
+    }
+    *Option: Custom43
+    {
+        *rcNameID: =RC_STR_CUSTOM43
+        *OptionID: 298
+    }
+    *Option: Custom44
+    {
+        *rcNameID: =RC_STR_CUSTOM44
+        *OptionID: 299
+    }
+    *Option: Custom45
+    {
+        *rcNameID: =RC_STR_CUSTOM45
+        *OptionID: 300
+    }
+    *Option: Custom46
+    {
+        *rcNameID: =RC_STR_CUSTOM46
+        *OptionID: 301
+    }
+    *Option: Custom47
+    {
+        *rcNameID: =RC_STR_CUSTOM47
+        *OptionID: 302
+    }
+    *Option: Custom48
+    {
+        *rcNameID: =RC_STR_CUSTOM48
+        *OptionID: 303
+    }
+    *Option: Custom49
+    {
+        *rcNameID: =RC_STR_CUSTOM49
+        *OptionID: 304
+    }
+    *Option: Custom50
+    {
+        *rcNameID: =RC_STR_CUSTOM50
+        *OptionID: 305
+    }
+    *Option: Custom51
+    {
+        *rcNameID: =RC_STR_CUSTOM51
+        *OptionID: 306
+    }
+    *Option: Custom52
+    {
+        *rcNameID: =RC_STR_CUSTOM52
+        *OptionID: 307
+    }
+    *Option: Custom53
+    {
+        *rcNameID: =RC_STR_CUSTOM53
+        *OptionID: 308
+    }
+    *Option: Custom54
+    {
+        *rcNameID: =RC_STR_CUSTOM54
+        *OptionID: 309
+    }
+    *Option: Custom55
+    {
+        *rcNameID: =RC_STR_CUSTOM55
+        *OptionID: 310
+    }
+    *Option: Custom56
+    {
+        *rcNameID: =RC_STR_CUSTOM56
+        *OptionID: 311
+    }
+    *Option: Custom57
+    {
+        *rcNameID: =RC_STR_CUSTOM57
+        *OptionID: 312
+    }
+    *Option: Custom58
+    {
+        *rcNameID: =RC_STR_CUSTOM58
+        *OptionID: 313
+    }
+    *Option: Custom59
+    {
+        *rcNameID: =RC_STR_CUSTOM59
+        *OptionID: 314
+    }
+    *Option: Custom60
+    {
+        *rcNameID: =RC_STR_CUSTOM60
+        *OptionID: 315
+    }
+    *Option: Custom61
+    {
+        *rcNameID: =RC_STR_CUSTOM61
+        *OptionID: 316
+    }
+    *Option: Custom62
+    {
+        *rcNameID: =RC_STR_CUSTOM62
+        *OptionID: 317
+    }
+    *Option: Custom63
+    {
+        *rcNameID: =RC_STR_CUSTOM63
+        *OptionID: 318
+    }
+    *Option: Custom64
+    {
+        *rcNameID: =RC_STR_CUSTOM64
+        *OptionID: 319
+    }
+    *Option: Custom65
+    {
+        *rcNameID: =RC_STR_CUSTOM65
+        *OptionID: 320
+    }
+    *Option: Custom66
+    {
+        *rcNameID: =RC_STR_CUSTOM66
+        *OptionID: 321
+    }
+    *Option: Custom67
+    {
+        *rcNameID: =RC_STR_CUSTOM67
+        *OptionID: 322
+    }
+    *Option: Custom68
+    {
+        *rcNameID: =RC_STR_CUSTOM68
+        *OptionID: 323
+    }
+    *Option: Custom69
+    {
+        *rcNameID: =RC_STR_CUSTOM69
+        *OptionID: 324
+    }
+    *Option: Custom70
+    {
+        *rcNameID: =RC_STR_CUSTOM70
+        *OptionID: 325
+    }
+    *Option: Custom71
+    {
+        *rcNameID: =RC_STR_CUSTOM71
+        *OptionID: 326
+    }
+    *Option: Custom72
+    {
+        *rcNameID: =RC_STR_CUSTOM72
+        *OptionID: 327
+    }
+    *Option: Custom73
+    {
+        *rcNameID: =RC_STR_CUSTOM73
+        *OptionID: 328
+    }
+    *Option: Custom74
+    {
+        *rcNameID: =RC_STR_CUSTOM74
+        *OptionID: 329
+    }
+    *Option: Custom75
+    {
+        *rcNameID: =RC_STR_CUSTOM75
+        *OptionID: 330
+    }
+    *Option: Custom76
+    {
+        *rcNameID: =RC_STR_CUSTOM76
+        *OptionID: 331
+    }
+    *Option: Custom77
+    {
+        *rcNameID: =RC_STR_CUSTOM77
+        *OptionID: 332
+    }
+    *Option: Custom78
+    {
+        *rcNameID: =RC_STR_CUSTOM78
+        *OptionID: 333
+    }
+    *Option: Custom79
+    {
+        *rcNameID: =RC_STR_CUSTOM79
+        *OptionID: 334
+    }
+    *Option: Custom80
+    {
+        *rcNameID: =RC_STR_CUSTOM80
+        *OptionID: 335
+    }
+    *Option: Custom81
+    {
+        *rcNameID: =RC_STR_CUSTOM81
+        *OptionID: 336
+    }
+    *Option: Custom82
+    {
+        *rcNameID: =RC_STR_CUSTOM82
+        *OptionID: 337
+    }
+    *Option: Custom83
+    {
+        *rcNameID: =RC_STR_CUSTOM83
+        *OptionID: 338
+    }
+    *Option: Custom84
+    {
+        *rcNameID: =RC_STR_CUSTOM84
+        *OptionID: 339
+    }
+    *Option: Custom85
+    {
+        *rcNameID: =RC_STR_CUSTOM85
+        *OptionID: 340
+    }
+    *Option: Custom86
+    {
+        *rcNameID: =RC_STR_CUSTOM86
+        *OptionID: 341
+    }
+    *Option: Custom87
+    {
+        *rcNameID: =RC_STR_CUSTOM87
+        *OptionID: 342
+    }
+    *Option: Custom88
+    {
+        *rcNameID: =RC_STR_CUSTOM88
+        *OptionID: 343
+    }
+    *Option: Custom89
+    {
+        *rcNameID: =RC_STR_CUSTOM89
+        *OptionID: 344
+    }
+    *Option: Custom90
+    {
+        *rcNameID: =RC_STR_CUSTOM90
+        *OptionID: 345
+    }
+    *Option: Custom91
+    {
+        *rcNameID: =RC_STR_CUSTOM91
+        *OptionID: 346
+    }
+    *Option: Custom92
+    {
+        *rcNameID: =RC_STR_CUSTOM92
+        *OptionID: 347
+    }
+    *Option: Custom93
+    {
+        *rcNameID: =RC_STR_CUSTOM93
+        *OptionID: 348
+    }
+    *Option: Custom94
+    {
+        *rcNameID: =RC_STR_CUSTOM94
+        *OptionID: 349
+    }
+    *Option: Custom95
+    {
+        *rcNameID: =RC_STR_CUSTOM95
+        *OptionID: 350
+    }
+    *Option: Custom96
+    {
+        *rcNameID: =RC_STR_CUSTOM96
+        *OptionID: 351
+    }
+    *Option: Custom97
+    {
+        *rcNameID: =RC_STR_CUSTOM97
+        *OptionID: 352
+    }
+    *Option: Custom98
+    {
+        *rcNameID: =RC_STR_CUSTOM98
+        *OptionID: 353
+    }
+    *Option: Custom99
+    {
+        *rcNameID: =RC_STR_CUSTOM99
+        *OptionID: 354
+    }
+    *Option: Custom100
+    {
+        *rcNameID: =RC_STR_CUSTOM100
+        *OptionID: 355
+    }
+}
+*%******************************************************************************
+*%                             Staple
+*%******************************************************************************
+*Feature: Stapling
+{
+    *PrintSchemaKeywordMap: "JobStapleAllDocuments"
+    *rcNameID: =RC_STR_STAPLE
+    *ConflictPriority: 30
+    *DefaultOption: OFF
+    *Option: OFF
+    {
+        *PrintSchemaKeywordMap: "None"
+        *rcNameID: =RC_STR_OFF
+    }
+    *Option: TopLeftSlant
+    {
+        *rcNameID: =RC_STR_TOP_LEFT_SLANT
+    }
+    *Option: TopRightSlant
+    {
+        *rcNameID: =RC_STR_TOP_RIGHT_SLANT
+    }
+    *Option: TopLeft
+    {
+        *PrintSchemaKeywordMap: "StapleTopLeft"
+        *rcNameID: =RC_STR_TOP_LEFT
+    }
+    *Option: TopRight
+    {
+        *PrintSchemaKeywordMap: "StapleTopRight"
+        *rcNameID: =RC_STR_TOP_RIGHT
+    }
+    *Option: Top2
+    {
+        *PrintSchemaKeywordMap: "StapleDualTop"
+        *rcNameID: =RC_STR_2_AT_TOP
+    }
+    *Option: Left2
+    {
+        *PrintSchemaKeywordMap: "StapleDualLeft"
+        *rcNameID: =RC_STR_2_AT_LEFT
+    }
+    *Option: Right2
+    {
+        *PrintSchemaKeywordMap: "StapleDualRight"
+        *rcNameID: =RC_STR_2_AT_RIGHT
+    }
+    *Option: SaddleStitch
+    {
+        *PrintSchemaKeywordMap: "SaddleStitch"
+        *rcNameID: =RC_STR_2_AT_CENTER2
+    }
+    *Option: TopLeftSlantStapleless
+    {
+        *rcNameID: =RC_STR_TOP_LEFT_SLANT_LESS
+    }
+    *Option: TopRightSlantStapleless
+    {
+        *rcNameID: =RC_STR_TOP_RIGHT_SLANT_LESS
+    }
+}
+*%******************************************************************************
+*%                             Punching
+*%******************************************************************************
+*Feature: Punching
+{
+    *PrintSchemaKeywordMap: "JobHolePunch"
+    *rcNameID: =RC_STR_PUNCH
+    *DefaultOption: OFF
+    *Option: OFF
+    {
+        *PrintSchemaKeywordMap: "None"
+        *rcNameID: =RC_STR_OFF
+    }
+    *Option: Left
+    {
+        *rcNameID: =RC_STR_LEFT
+    }
+    *Option: Top
+    {
+        *rcNameID: =RC_STR_TOP
+    }
+    *Option: Right
+    {
+        *rcNameID: =RC_STR_RIGHT
+    }
+    *Option: Left2
+    {
+        *rcNameID: =RC_STR_LEFT2
+    }
+    *Option: Top2
+    {
+        *rcNameID: =RC_STR_TOP2
+    }
+    *Option: Right2
+    {
+        *rcNameID: =RC_STR_RIGHT2
+    }
+*Ifdef: EXP_MODEL
+    *Option: Left3
+    {
+        *rcNameID: =RC_STR_LEFT3
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: Top3
+    {
+        *rcNameID: =RC_STR_TOP3
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: Right3
+    {
+        *rcNameID: =RC_STR_RIGHT3
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: Left4
+    {
+        *rcNameID: =RC_STR_LEFT4
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: Top4
+    {
+        *rcNameID: =RC_STR_TOP4
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: Right4
+    {
+        *rcNameID: =RC_STR_RIGHT4
+    }
+*Endif:
+    *Option: LeftOrTopMulti
+    {
+        *rcNameID: =RC_STR_LEFT_OR_TOP_MULTI
+    }
+    *Option: RightOrTopMulti
+    {
+        *rcNameID: =RC_STR_RIGHT_OR_TOP_MULTI
+    }
+*Ifdef: EXP_MODEL
+    *Option: LeftMulti
+    {
+        *rcNameID: =RC_STR_LEFT_MULTI
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: TopMulti
+    {
+        *rcNameID: =RC_STR_TOP_MULTI
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: RightMulti
+    {
+        *rcNameID: =RC_STR_RIGHT_MULTI
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: LeftOrTopDouble
+    {
+        *rcNameID: =RC_STR_LEFT_OR_TOP_DOUBLE
+    }
+*Endif:
+*Ifdef: EXP_MODEL
+    *Option: RightOrTopDouble
+    {
+        *rcNameID: =RC_STR_RIGHT_OR_TOP_DOUBLE
+    }
+*Endif:
+}
+*%******************************************************************************
+*%                             PageOrientation
+*%******************************************************************************
+*Feature: Orientation
+{
+    *PrintSchemaKeywordMap: "PageOrientation"
+    *rcNameID: =RC_STR_ORIENTATION
+    *DefaultOption: PORTRAIT
+
+    *Option: PORTRAIT
+    {
+        *PrintSchemaKeywordMap: "Portrait"
+        *rcNameID: =RC_STR_PORTRAIT
+    }
+
+    *Option: LANDSCAPE_CC270
+    {
+        *PrintSchemaKeywordMap: "Landscape"
+        *rcNameID: =RC_STR_LANDSCAPE
+    }
+}
+*%******************************************************************************
+*%                             ColorMode
+*%******************************************************************************
+*Feature: ColorMode
+{
+    *PrintSchemaKeywordMap: "PageOutputColor"
+    *rcNameID: =RC_STR_COLOR_MODE
+*Ifdef: MONO_MODEL
+    *DefaultOption: MONO
+*Ifdef: SUPPORT_FIXDMCOLOR
+    *Define: SET_RGB24BPP
+*Endif: *%%% SUPPORT_FIXDMCOLOR
+*Else:  *%%% !MONO_MODEL
+    *DefaultOption: RGB24BPP
+    *Define: SET_RGB24BPP
+*Endif: *%%% MONO_MODEL
+
+*Ifdef: SET_RGB24BPP
+    *Option: RGB24BPP
+    {
+        *PrintSchemaKeywordMap: "Color"
+        *rcNameID: =RC_STR_MODE_COLOR
+        EXTERN_GLOBAL: *StripBlanks: LIST(LEADING,ENCLOSED,TRAILING)
+        *DevBPP: 24
+        *DevNumOfPlanes: 1
+        *DrvBPP: 24
+        *PaletteSize: 256
+        *PaletteProgrammable?: TRUE
+    }
+*Endif: *%%% SET_RGB24BPP
+    *Option: MONO
+    {
+        *PrintSchemaKeywordMap: "Monochrome"
+        *rcNameID: =RC_STR_MODE_MONO
+        *Color?: FALSE
+    }
+}
+*%******************************************************************************
+*%                              Rotate by 180 degrees
+*%******************************************************************************
+*Feature: ImageDirection
+{
+    *rcNameID: =RC_STR_ROTETE_BY_180_DEGREES
+    *DefaultOption: Normal
+    *Option: Normal
+    {
+        *rcNameID: =RC_STR_OFF
+    }
+    *Option: Reverse
+    {
+        *rcNameID: =RC_STR_ON
+    }
+}
+*%******************************************************************************
+*%                              Resolution
+*%******************************************************************************
+*Feature: Resolution
+{
+    *PrintSchemaKeywordMap: "PageResolution"
+    *rcNameID: =RC_STR_RESOLUTION
+    *DefaultOption: 600dpi
+
+    *Option: 600dpi
+    {
+        *rcNameID: =RC_STR_600_DPI
+        *DPI: PAIR(600, 600)
+        *TextDPI: PAIR(600, 600)
+        *SpotDiameter: 100
+        *Command: CmdBeginRaster { *Cmd : "<1B>*v7S<1B>*r1A" }
+        *Command: CmdEndRaster { *Cmd : "<1B>*rC" }
+        *Command: CmdSendBlockData { *Cmd : "<1B>*b" %d{NumOfDataBytes}"W" }
+    }
+    *Option: 1200dpi
+    {
+        *rcNameID: =RC_STR_1200_DPI
+        *DPI: PAIR(1200, 1200)
+        *TextDPI: PAIR(1200, 1200)
+        *SpotDiameter: 100
+        *Command: CmdBeginRaster { *Cmd : "<1B>*v7S<1B>*r1A" }
+        *Command: CmdEndRaster { *Cmd : "<1B>*rC" }
+        *Command: CmdSendBlockData { *Cmd : "<1B>*b" %d{NumOfDataBytes}"W" }
+    }
+}
+*%******************************************************************************
+*%                            Duplex
+*%******************************************************************************
+*Feature: Duplex
+{
+    *PrintSchemaKeywordMap: "JobDuplexAllDocumentsContiguously"
+    *rcNameID: =RC_STR_DUPLEX
+    *DefaultOption: NONE
+    *Option: NONE
+    {
+        *PrintSchemaKeywordMap: "OneSided"
+        *rcNameID: =NONE_DISPLAY
+    }
+    *Option: VERTICAL
+    {
+        *PrintSchemaKeywordMap: "TwoSidedLongEdge"
+        *rcNameID: =RC_STR_LONG_EDGE
+    }
+    *Option: HORIZONTAL
+    {
+        *PrintSchemaKeywordMap: "TwoSidedShortEdge"
+        *rcNameID: =RC_STR_SHORT_EDGE
+    }
+}
+*%******************************************************************************
+*%                             Collate
+*%******************************************************************************
+*Feature: Collate
+{
+    *PrintSchemaKeywordMap: "DocumentCollate"
+    *rcNameID: =RC_STR_COLLATE
+    *DefaultOption: OFF
+    *Option: OFF
+    {
+        *PrintSchemaKeywordMap: "Uncollated"
+        *rcNameID: =RC_STR_OFF
+    }
+    *Option: ON
+    {
+        *PrintSchemaKeywordMap: "Collated"
+        *rcNameID: =RC_STR_ON
+    }
+}
+*%******************************************************************************
+*%                             PageOrder
+*%******************************************************************************
+*Feature: PageOrder
+{
+    *PrintSchemaKeywordMap: "JobPageOrder"
+    *rcNameID: =RC_STR_PAGE_ORDER
+    *DefaultOption: FrontToBack
+    *Option: FrontToBack
+    {
+        *PrintSchemaKeywordMap: "Standard"
+        *rcNameID: =RC_STR_FRONT_TO_BACK
+    }
+    *Option: BackToFront
+    {
+        *PrintSchemaKeywordMap: "Reverse"
+        *rcNameID: =RC_STR_BACK_TO_FRONT
+    }
+}
+
+*%******************************************************************************
+*%                             PagesPerSheet
+*%******************************************************************************
+*Feature: PagesPerSheet
+{
+    *PrintSchemaKeywordMap: "JobNUpAllDocumentsContiguously"
+    *rcNameID: =RC_STR_PAGES_PER_SHEET
+    *DefaultOption: 1
+    *Option: 1
+    {
+        *rcNameID: =RC_STR_1
+    }
+    *Option: 2
+    {
+        *rcNameID: =RC_STR_2
+    }
+    *Option: 4
+    {
+        *rcNameID: =RC_STR_4
+    }
+    *Option: 6
+    {
+        *rcNameID: =RC_STR_6
+    }
+    *Option: 9
+    {
+        *rcNameID: =RC_STR_9
+    }
+    *Option: 16
+    {
+        *rcNameID: =RC_STR_16
+    }
+}
+
+
+*%******************************************************************************
+*%                             Booklet
+*%******************************************************************************
+*Feature: Booklet
+{
+    *rcNameID: =RC_STR_BOOKLET
+    *ConflictPriority: 20
+    *DefaultOption: Off
+    *Option: Off
+    {
+        *rcNameID: =RC_STR_OFF
+    }
+    *Option: Booklet
+    {
+        *rcNameID: =RC_STR_MAGAZINE
+    }
+}
+*%******************************************************************************
+*%                             Input Bin
+*%******************************************************************************
+*Feature: InputBin
+{
+    *PrintSchemaKeywordMap: "PageInputBin"
+    *rcNameID: =RC_STR_INPUT_BIN
+    *Option: AUTO
+    {
+        *rcNameID: =RC_STR_AUTO
+        *OptionID: 7
+    }
+    *Option: Tray1
+    {
+        *rcNameID: =RC_STR_TRAY1
+        *OptionID: 1
+    }
+    *Option: Tray2
+    {
+        *rcNameID: =RC_STR_TRAY2
+        *OptionID: 3
+    }
+    *Option: Tray3
+    {
+        *rcNameID: =RC_STR_TRAY3
+        *OptionID: 2
+    }
+    *Option: Tray3_LCT
+    {
+        *rcNameID: =RC_STR_TRAY3_LCT
+        *OptionID: 301
+    }
+    *Option: Tray4
+    {
+        *rcNameID: =RC_STR_TRAY4
+        *OptionID: 256
+    }
+    *Option: Tray5
+    {
+        *rcNameID: =RC_STR_TRAY5
+        *OptionID: 261
+    }
+    *Option: Tray6
+    {
+        *rcNameID: =RC_STR_TRAY6
+        *OptionID: 262
+    }
+    *Option: Tray7
+    {
+        *rcNameID: =RC_STR_TRAY7
+        *OptionID: 263
+    }
+    *Option: Tray8
+    {
+        *rcNameID: =RC_STR_TRAY8
+        *OptionID: 264
+    }
+    *Option: Tray9
+    {
+        *rcNameID: =RC_STR_TRAY9
+        *OptionID: 265
+    }
+    *Option: Tray10
+    {
+        *rcNameID: =RC_STR_TRAY10
+        *OptionID: 267
+    }
+    *Option: Tray11
+    {
+        *rcNameID: =RC_STR_TRAY11
+        *OptionID: 268
+    }
+    *Option: TrayA
+    {
+        *rcNameID: =RC_STR_TRAYA
+        *OptionID: 266
+    }
+    *Option: BypassTray
+    {
+        *rcNameID: =RC_STR_BYPASS_TRAY
+        *OptionID: 4
+    }
+    *Option: OneSheetBypassTray
+    {
+        *rcNameID: =RC_STR_ONESHEET_BYPASS_TRAY
+        *OptionID: 302
+    }
+    *Option: FrontBypassTray
+    {
+        *rcNameID: =RC_STR_FRONT_BYPASS_TRAY
+        *OptionID: 303
+    }
+    *Option: LCT
+    {
+        *rcNameID: =RC_STR_LCT
+        *OptionID: 11
+    }
+}
+*%******************************************************************************
+*%                             Output Bin
+*%******************************************************************************
+*Feature: OutputBin
+{
+    *PrintSchemaKeywordMap: "JobOutputBin"
+    *rcNameID: =RC_STR_OUTPUT_BIN
+    *DefaultOption: PrinterDefault
+    *Option: PrinterDefault
+    {
+        *rcNameID: =RC_STR_PRINTER_DEFAULT
+    }
+    *Option: Standard
+    {
+        *rcNameID: =RC_STR_OUTBIN_STANDARD
+    }
+    *Option: Copy
+    {
+        *rcNameID: =RC_STR_OUTBIN_COPY
+    }
+    *Option: InternalShift
+    {
+        *rcNameID: =RC_STR_INTERNAL_SHIFT
+    }
+    *Option: Shift
+    {
+        *rcNameID: =RC_STR_SHIFT
+    }
+    *Option: Internal
+    {
+        *rcNameID: =RC_STR_INTERNAL
+    }
+    *Option: Internal2
+    {
+        *rcNameID: =RC_STR_INTERNAL2
+    }
+    *Option: FinisherUpper
+    {
+        *rcNameID: =RC_STR_FIN_UPPER
+    }
+    *Option: FinisherShift
+    {
+        *rcNameID: =RC_STR_FIN_SHIFT
+    }
+    *Option: FinisherShift1
+    {
+        *rcNameID: =RC_STR_FIN_SHIFT1
+    }
+    *Option: FinisherShift2
+    {
+        *rcNameID: =RC_STR_FIN_SHIFT2
+    }
+    *Option: FinisherShiftSecond
+    {
+        *rcNameID: =RC_STR_FIN_SHIFT_SECOND
+    }
+    *Option: BookletProcessorTray
+    {
+        *rcNameID: =RC_STR_BOOKLET_PROCESSOR_TRAY
+    }
+    *Option: BookletProcessorTray2
+    {
+        *rcNameID: =RC_STR_BOOKLET_PROCESSOR_TRAY2
+    }
+    *Option: FinisherBooklet
+    {
+        *rcNameID: =RC_STR_FIN_BOOKLET
+    }
+    *Option: TrimmerTray
+    {
+        *rcNameID: =RC_STR_TRIMMER_TRAY
+    }
+    *Option: LeftTray
+    {
+        *rcNameID: =RC_STR_LEFT_TRAY
+    }
+    *Option: LeftTray1
+    {
+        *rcNameID: =RC_STR_LEFT_TRAY1
+    }
+    *Option: LeftTray2
+    {
+        *rcNameID: =RC_STR_LEFT_TRAY2
+    }
+    *Option: RightTray
+    {
+        *rcNameID: =RC_STR_RIGHT_TRAY
+    }
+    *Option: MailboxProofTray
+    {
+        *rcNameID: =RC_STR_MAILBOX_PROOF_TRAY
+    }
+    *Option: MailBoxBin1
+    {
+        *rcNameID: =RC_STR_MAILBOX1
+    }
+    *Option: MailBoxBin2
+    {
+        *rcNameID: =RC_STR_MAILBOX2
+    }
+    *Option: MailBoxBin3
+    {
+        *rcNameID: =RC_STR_MAILBOX3
+    }
+    *Option: MailBoxBin4
+    {
+        *rcNameID: =RC_STR_MAILBOX4
+    }
+    *Option: MailBoxBin5
+    {
+        *rcNameID: =RC_STR_MAILBOX5
+    }
+    *Option: MailBoxBin6
+    {
+        *rcNameID: =RC_STR_MAILBOX6
+    }
+    *Option: MailBoxBin7
+    {
+        *rcNameID: =RC_STR_MAILBOX7
+    }
+    *Option: MailBoxBin8
+    {
+        *rcNameID: =RC_STR_MAILBOX8
+    }
+    *Option: MailBoxBin9
+    {
+        *rcNameID: =RC_STR_MAILBOX9
+    }
+    *Option: OneSheetOutputTray
+    {
+        *rcNameID: =RC_STR_ONE_SHEET_OUTPUT_TRAY
+    }
+    *Option: LoadingTray
+    {
+        *rcNameID: =RC_STR_LOADING_TRAY
+    }
+    *Option: RingStacker
+    {
+        *rcNameID: =RC_STR_RING_STACKER
+    }
+    *Option: StackerProof
+    {
+        *rcNameID: =RC_STR_STACKER_PROOF
+    }
+    *Option: StackerProofTray2
+    {
+        *rcNameID: =RC_STR_STACKER_PROOF_TRAY2
+    }
+    *Option: LargeStacker
+    {
+        *rcNameID: =RC_STR_LARGE_STACKER
+    }
+    *Option: LargeStacker2
+    {
+        *rcNameID: =RC_STR_LARGE_STACKER2
+    }
+    *Option: LongStackerTray
+    {
+        *rcNameID: =RC_STR_LONG_STACKER_TRAY
+    }
+    *Option: LongStackerTray2
+    {
+        *rcNameID: =RC_STR_LONG_STACKER_TRAY2
+    }
+    *Option: ProofPurgeTray
+    {
+        *rcNameID: =RC_STR_PROOF_PURGE_TRAY
+    }
+    *Option: FoldProof
+    {
+        *rcNameID: =RC_STR_FOLDING_UNIT
+    }
+    *Option: PeripheralsIfBox
+    {
+        *rcNameID: =RC_STR_PERIPHERALS_IFBOX
+    }
+    *Option: TwinLoopBindTray
+    {
+        *rcNameID: =RC_STR_TWIN_LOOP_BIND_TRAY
+    }
+}
+*%******************************************************************************
+*%                             Graphics Mode
+*%******************************************************************************
+*Feature: GraphicsMode
+{
+    *rcNameID: =RC_STR_GRAPHICS_MODE
+    *DefaultOption: Vector
+    *Option: Vector
+    {
+        *rcNameID: =RC_STR_VECTOR
+    }
+    *Option: Raster
+    {
+        *rcNameID: =RC_STR_RASTER
+    }
+}
+*%******************************************************************************
+*%                             Printable Area
+*%******************************************************************************
+*Feature: PrintableArea
+{
+    *rcNameID: =RC_STR_PRINTABLE_AREA
+    *DefaultOption: Regular
+    *Option: Regular
+    {
+        *rcNameID: =RC_STR_REGULAR
+    }
+    *Option: Enlargedmargin2
+    {
+        *Name: "Enlargedmargin"
+    }
+}
+*%******************************************************************************
+*%                             Edge To Edge Print
+*%******************************************************************************
+*Feature: EdgeToEdgePrint
+{
+    *rcNameID: =RC_STR_EDGE_TO_EDGE
+    *DefaultOption: Off
+    *Option: Off
+    {
+        *rcNameID: =RC_STR_OFF
+    }
+    *Option: EdgeToEdge
+    {
+        *rcNameID: =RC_STR_ON
+    }
+}
+*%******************************************************************************
+*%                          Selection Constraints
+*%******************************************************************************
+*InvalidCombination: LIST(Duplex.VERTICAL, Booklet.Booklet)
+*InvalidCombination: LIST(Duplex.HORIZONTAL, Booklet.Booklet)
+
+*InvalidCombination: LIST(PagesPerSheet.16, Booklet.Booklet)
+
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Left)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Top)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Right)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Left2)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Top2)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Right2)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.RightOrTopMulti)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Left3)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Top3)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Right3)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Left4)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Top4)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.Right4)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.LeftMulti)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.TopMulti)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.RightMulti)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Booklet.Booklet, Punching.RightOrTopDouble)
+*Endif:
+
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.TopLeftSlant)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.TopRightSlant)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.Top2)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.Left2)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.Right2)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.TopLeft)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.TopRight)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.TopLeftSlantStapleless)
+*InvalidCombination: LIST(Booklet.Booklet, Stapling.TopRightSlantStapleless)
+
+*InvalidCombination: LIST(Stapling.Top2, Punching.Left)
+*InvalidCombination: LIST(Stapling.Top2, Punching.Left2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.Top2, Punching.Left3)
+*InvalidCombination: LIST(Stapling.Top2, Punching.Left4)
+*Endif:
+*InvalidCombination: LIST(Stapling.Top2, Punching.Right)
+*InvalidCombination: LIST(Stapling.Top2, Punching.Right2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.Top2, Punching.Right3)
+*InvalidCombination: LIST(Stapling.Top2, Punching.Right4)
+*InvalidCombination: LIST(Stapling.Top2, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.Top2, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.Top2, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.Top2, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.Top2, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.Top2, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.Top2, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.Right2, Punching.Left)
+*InvalidCombination: LIST(Stapling.Right2, Punching.Left2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.Right2, Punching.Left3)
+*InvalidCombination: LIST(Stapling.Right2, Punching.Left4)
+*Endif:
+*InvalidCombination: LIST(Stapling.Right2, Punching.Top)
+*InvalidCombination: LIST(Stapling.Right2, Punching.Top2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.Right2, Punching.Top3)
+*InvalidCombination: LIST(Stapling.Right2, Punching.Top4)
+*InvalidCombination: LIST(Stapling.Right2, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.Right2, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.Right2, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.Right2, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.Right2, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.Right2, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.Right2, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.Left2, Punching.Right)
+*InvalidCombination: LIST(Stapling.Left2, Punching.Right2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.Left2, Punching.Right3)
+*InvalidCombination: LIST(Stapling.Left2, Punching.Right4)
+*Endif:
+*InvalidCombination: LIST(Stapling.Left2, Punching.Top)
+*InvalidCombination: LIST(Stapling.Left2, Punching.Top2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.Left2, Punching.Top3)
+*InvalidCombination: LIST(Stapling.Left2, Punching.Top4)
+*InvalidCombination: LIST(Stapling.Left2, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.Left2, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.Left2, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.Left2, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.Left2, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.Left2, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.Left2, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.Right)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.Right2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.Right3)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.Right4)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.TopLeft, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.TopRight, Punching.Left)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.Left2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.TopRight, Punching.Left3)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.Left4)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.TopRight, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.Right)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.Right2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.Right3)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.Right4)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.TopLeftSlant, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.Left)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.Left2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.Left3)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.Left4)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.TopRightSlant, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.Right)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.Right2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.Right3)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.Right4)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.TopLeftSlantStapleless, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.Left)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.Left2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.Left3)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.Left4)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.TopRightSlantStapleless, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Top)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Left)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Right)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Left2)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Top2)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Right2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Left3)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Top3)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Right3)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Left4)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Top4)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.Right4)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.LeftMulti)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.TopMulti)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.RightMulti)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(Stapling.SaddleStitch, Punching.RightOrTopDouble)
+*Endif:
+
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Top)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Left)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Right)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Left2)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Top2)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Right2)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Left3)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Top3)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Right3)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Left4)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Top4)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.Right4)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.RightOrTopMulti)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.LeftMulti)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.TopMulti)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.RightMulti)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(InputBin.BypassTray, Punching.RightOrTopDouble)
+*Endif:
+
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.TopLeftSlant)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.TopRightSlant)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.Top2)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.Left2)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.Right2)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.TopLeft)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.TopRight)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.SaddleStitch)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.TopLeftSlantStapleless)
+*InvalidCombination: LIST(InputBin.BypassTray, Stapling.TopRightSlantStapleless)
+
+
+*%******************************************************************************
+*%                          Concealed UI Property
+*%******************************************************************************
+
+*Feature: DocumentsizeLegal
+{
+    *Name: "DocumentsizeLegal"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeLetter
+{
+    *Name: "DocumentsizeLetter"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeExecutive
+{
+    *Name: "DocumentsizeExecutive"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize5_5x8_5
+{
+    *Name: "Documentsize5_5x8_5"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeA4
+{
+    *Name: "DocumentsizeA4"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeB5jis
+{
+    *Name: "DocumentsizeB5jis"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeISOB5
+{
+    *Name: "DocumentsizeISOB5"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize12x18
+{
+    *Name: "Documentsize12x18"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize11x17
+{
+    *Name: "Documentsize11x17"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeA3
+{
+    *Name: "DocumentsizeA3"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeA5
+{
+    *Name: "DocumentsizeA5"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeA6
+{
+    *Name: "DocumentsizeA6"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeB4jis
+{
+    *Name: "Documentsizeb4jis"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeB6
+{
+    *Name: "DocumentsizeB6"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8x13
+{
+    *Name: "Documentsize8x13"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8_25x13
+{
+    *Name: "Documentsize8_25x13"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8_5x13
+{
+    *Name: "Documentsize8_5x13"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8_5x13_4
+{
+    *Name: "Documentsize8_5x13_4"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeCom10env
+{
+    *Name: "DocumentsizeCom10env"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeMonarchenv
+{
+    *Name: "DocumentsizeMonarchenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeDlenv
+{
+    *Name: "DocumentsizeDlenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeC6env
+{
+    *Name: "DocumentsizeC6env"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeC5env
+{
+    *Name: "DocumentsizeC5env"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8k
+{
+    *Name: "Documentsize8k"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize16k
+{
+    *Name: "Documentsize16k"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8_5x12
+{
+    *Name: "Documentsize8_5x12"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizePostcard
+{
+    *Name: "DocumentsizePostcard"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeDoublepostcard
+{
+    *Name: "DocumentsizeDoublepostcard"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeDoublepostcardrotated
+{
+    *Name: "DocumentsizeDoublepostcardrotated"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeChou3jenv
+{
+    *Name: "DocumentsizeChou3jenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeChou4jenv
+{
+    *Name: "DocumentsizeChou4jenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeYouchou3jenv
+{
+    *Name: "DocumentsizeYouchou3jenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeYou4jenv
+{
+    *Name: "DocumentsizeYou4jenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeKaku2jenv
+{
+    *Name: "DocumentsizeKaku2jenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Else:
+*Feature: DocumentsizeKaku3jenv
+{
+    *Name: "DocumentsizeKaku3jenv"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Feature: DocumentsizeGovernmentlg
+{
+    *Name: "DocumentsizeGovernmentlg"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeEngquatro
+{
+    *Name: "DocumentsizeEngquatro"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize10x14
+{
+    *Name: "Documentsize10x14"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize11x15
+{
+    *Name: "Documentsize11x15"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeSra3
+{
+    *Name: "DocumentsizeSra3"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeSra4
+{
+    *Name: "DocumentsizeSra4"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize226x310mm
+{
+    *Name: "Documentsize226x310mm"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize310x432mm
+{
+    *Name: "Documentsize310x432mm"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeB6half
+{
+    *Name: "DocumentsizeB6half"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeB7
+{
+    *Name: "DocumentsizeB7"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizePostcardstandard
+{
+    *Name: "DocumentsizePostcardstandard"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeBd
+{
+    *Name: "DocumentsizeBd"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeLineslider1
+{
+    *Name: "DocumentsizeLineslider1"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeLineslider2
+{
+    *Name: "DocumentsizeLineslider2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeGlt
+{
+    *Name: "DocumentsizeGlt"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize11x14
+{
+    *Name: "Documentsize11x14"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize13x19_2
+{
+    *Name: "Documentsize13x19_2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize13x19
+{
+    *Name: "Documentsize13x19"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize12_6x19_2
+{
+    *Name: "Documentsize12_6x19_2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize12_6x18_5
+{
+    *Name: "Documentsize12_6x18_5"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize13x18
+{
+    *Name: "Documentsize13x18"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize10x15
+{
+    *Name: "Documentsize10x15"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeKiku4
+{
+    *Name: "DocumentsizeKiku4"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize329x483mm
+{
+    *Name: "Documentsize329x483mm"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8_5x13_6
+{
+    *Name: "Documentsize8_5x13_6"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Documentsize8_11x13_3
+{
+    *Name: "Documentsize8_11x13_3"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeA5lef
+{
+    *Name: "DocumentsizeA5lef"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DocumentsizeCustompapersize
+{
+    *Name: "DocumentsizeCustompapersize"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePlainandrecycled
+{
+    *Name: "Standardpages_mediatypePlainandrecycled"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePlain
+{
+    *Name: "Standardpages_mediatypePlain"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeRecycled
+{
+    *Name: "Standardpages_mediatypeRecycled"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeLetterhead
+{
+    *Name: "Standardpages_mediatypeLetterhead"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePlain2
+{
+    *Name: "Standardpages_mediatypePlain2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSpecial
+{
+    *Name: "Standardpages_mediatypeSpecial"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSpecial2
+{
+    *Name: "Standardpages_mediatypeSpecial2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSpecial3
+{
+    *Name: "Standardpages_mediatypeSpecial3"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSpecial4
+{
+    *Name: "Standardpages_mediatypeSpecial4"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSpecial5
+{
+    *Name: "Standardpages_mediatypeSpecial5"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMiddlethick
+{
+    *Name: "Standardpages_mediatypeMiddlethick"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThick
+{
+    *Name: "Standardpages_mediatypeThick"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThick2
+{
+    *Name: "Standardpages_mediatypeThick2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThick3
+{
+    *Name: "Standardpages_mediatypeThick3"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThick4
+{
+    *Name: "Standardpages_mediatypeThick4"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThin
+{
+    *Name: "Standardpages_mediatypeThin"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeTransparency
+{
+    *Name: "Standardpages_mediatypeTransparency"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeTranslucent
+{
+    *Name: "Standardpages_mediatypeTranslucent"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeColor
+{
+    *Name: "Standardpages_mediatypeColor"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeColor1
+{
+    *Name: "Standardpages_mediatypeColor1"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeColor2
+{
+    *Name: "Standardpages_mediatypeColor2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePreprinted
+{
+    *Name: "Standardpages_mediatypePreprinted"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePrepunched
+{
+    *Name: "Standardpages_mediatypePrepunched"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeLabels
+{
+    *Name: "Standardpages_mediatypeLabels"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeBond
+{
+    *Name: "Standardpages_mediatypeBond"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeCardstock
+{
+    *Name: "Standardpages_mediatypeCardstock"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeTabstock
+{
+    *Name: "Standardpages_mediatypeTabstock"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeYellow
+{
+    *Name: "Standardpages_mediatypeYellow"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeGreen
+{
+    *Name: "Standardpages_mediatypeGreen"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeBlue
+{
+    *Name: "Standardpages_mediatypeBlue"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePurple
+{
+    *Name: "Standardpages_mediatypePurple"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeIvory
+{
+    *Name: "Standardpages_mediatypeIvory"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeOrange
+{
+    *Name: "Standardpages_mediatypeOrange"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePink
+{
+    *Name: "Standardpages_mediatypePink"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeRed
+{
+    *Name: "Standardpages_mediatypeRed"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeGray
+{
+    *Name: "Standardpages_mediatypeGray"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeBlack
+{
+    *Name: "Standardpages_mediatypeBlack"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeGlossy
+{
+    *Name: "Standardpages_mediatypeGlossy"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeGlossycoated
+{
+    *Name: "Standardpages_mediatypeGlossycoated"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMatcoated
+{
+    *Name: "Standardpages_mediatypeMatcoated"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeWaterproof
+{
+    *Name: "Standardpages_mediatypeWaterproof"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeHgplain
+{
+    *Name: "Standardpages_mediatypeHgplain"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeEnvelope
+{
+    *Name: "Standardpages_mediatypeEnvelope"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePostcard
+{
+    *Name: "Standardpages_mediatypePostcard"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeInkjetpostcard
+{
+    *Name: "Standardpages_mediatypeInkjetpostcard"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeCoated
+{
+    *Name: "Standardpages_mediatypeCoated"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeNcr
+{
+    *Name: "Standardpages_mediatypeNcr"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSpecialp
+{
+    *Name: "Standardpages_mediatypeSpecialp"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeAuto
+{
+    *Name: "Standardpages_mediatypeAuto"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSpecial6
+{
+    *Name: "Standardpages_mediatypeSpecial6"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePlainduplexbackside
+{
+    *Name: "Standardpages_mediatypePlainduplexbackside"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThickduplexbackside
+{
+    *Name: "Standardpages_mediatypeThickduplexbackside"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThick2duplexbackside
+{
+    *Name: "Standardpages_mediatypeThick2duplexbackside"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThick3duplexbackside
+{
+    *Name: "Standardpages_mediatypeThick3duplexbackside"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThick4duplexbackside
+{
+    *Name: "Standardpages_mediatypeThick4duplexbackside"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeGlossytabstock
+{
+    *Name: "Standardpages_mediatypeGlossytabstock"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMattabstock
+{
+    *Name: "Standardpages_mediatypeMattabstock"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMoreglossytabstock
+{
+    *Name: "Standardpages_mediatypeMoreglossytabstock"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThickglossycoated
+{
+    *Name: "Standardpages_mediatypeThickglossycoated"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeThickmatcoated
+{
+    *Name: "Standardpages_mediatypeThickmatcoated"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeGlossyenvelope
+{
+    *Name: "Standardpages_mediatypeGlossyenvelope"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMatenvelope
+{
+    *Name: "Standardpages_mediatypeMatenvelope"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMoreglossyenvelope
+{
+    *Name: "Standardpages_mediatypeMoreglossyenvelope"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypePostcardduplexbackside
+{
+    *Name: "Standardpages_mediatypePostcardduplexbackside"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeClearfile
+{
+    *Name: "Standardpages_mediatypeClearfile"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMagnet
+{
+    *Name: "Standardpages_mediatypeMagnet"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeMetallicpearl
+{
+    *Name: "Standardpages_mediatypeMetallicpearl"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeSynthetic
+{
+    *Name: "Standardpages_mediatypeSynthetic"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_mediatypeTexture
+{
+    *Name: "Standardpages_mediatypeTexture"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: ColorbwBlackandwhite
+{
+    *Name: "ColorbwBlackandwhite"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: ColorbwColor
+{
+    *Name: "ColorbwColor"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Resolution600
+{
+    *Name: "Resolution600"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Resolution1200
+{
+    *Name: "Resolution1200"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Resolution4800x1200
+{
+    *Name: "Resolution4800x1200"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DuplexOff
+{
+    *Name: "DuplexOff"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DuplexLongedgeleftortop
+{
+    *Name: "DuplexLongedgeleftortop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: DuplexShortedgetoporleft
+{
+    *Name: "DuplexShortedgetoporleft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleOff
+{
+    *Name: "StapleOff"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleTopleftslant
+{
+    *Name: "StapleTopleftslant"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleToprightslant
+{
+    *Name: "StapleToprightslant"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleTopleft
+{
+    *Name: "StapleTopleft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleTopright
+{
+    *Name: "StapleTopright"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Staple2attop
+{
+    *Name: "Staple2attop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Staple2atleft
+{
+    *Name: "Staple2atleft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Staple2atright
+{
+    *Name: "Staple2atright"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Staple2atcenter
+{
+    *Name: "Staple2atcenter"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleTopleftslantstapleless
+{
+    *Name: "StapleTopleftslantstapleless"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleToprightslantstapleless
+{
+    *Name: "StapleToprightslantstapleless"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: PunchOff
+{
+    *Name: "PunchOff"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: PunchLeft
+{
+    *Name: "PunchLeft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: PunchTop
+{
+    *Name: "PunchTop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: PunchRight
+{
+    *Name: "PunchRight"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Punch2atleft
+{
+    *Name: "Punch2atleft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Punch2attop
+{
+    *Name: "Punch2attop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Punch2atright
+{
+    *Name: "Punch2atright"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Ifdef: EXP_MODEL
+*Feature: Punch3atleft
+{
+    *Name: "Punch3atleft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: Punch3attop
+{
+    *Name: "Punch3attop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: Punch3atright
+{
+    *Name: "Punch3atright"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: Punch4atleft
+{
+    *Name: "Punch4atleft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: Punch4attop
+{
+    *Name: "Punch4attop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: Punch4atright
+{
+    *Name: "Punch4atright"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Feature: PunchMultiatleftortop
+{
+    *Name: "PunchMultiatleftortop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: PunchMultiatrightortop
+{
+    *Name: "PunchMultiatrightortop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Ifdef: EXP_MODEL
+*Feature: PunchMultiatleft
+{
+    *Name: "PunchMultiatleft"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: PunchMultiattop
+{
+    *Name: "PunchMultiattop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: PunchMultiatright
+{
+    *Name: "PunchMultiatright"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: PunchDoubleatleftortop
+{
+    *Name: "PunchDoubleatleftortop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Ifdef: EXP_MODEL
+*Feature: PunchDoubleatrightortop
+{
+    *Name: "PunchDoubleatrightortop"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Endif:
+*Feature: Standardpages_inputtrayAutotrayselect
+{
+    *Name: "Standardpages_inputtrayAutotrayselect"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray1
+{
+    *Name: "Standardpages_inputtrayTray1"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray2
+{
+    *Name: "Standardpages_inputtrayTray2"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray3
+{
+    *Name: "Standardpages_inputtrayTray3"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray3lct
+{
+    *Name: "Standardpages_inputtrayTray3lct"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray4
+{
+    *Name: "Standardpages_inputtrayTray4"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray5
+{
+    *Name: "Standardpages_inputtrayTray5"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray6
+{
+    *Name: "Standardpages_inputtrayTray6"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray7
+{
+    *Name: "Standardpages_inputtrayTray7"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray8
+{
+    *Name: "Standardpages_inputtrayTray8"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray9
+{
+    *Name: "Standardpages_inputtrayTray9"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray10
+{
+    *Name: "Standardpages_inputtrayTray10"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTray11
+{
+    *Name: "Standardpages_inputtrayTray11"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayTraya
+{
+    *Name: "Standardpages_inputtrayTraya"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayBypasstray
+{
+    *Name: "Standardpages_inputtrayBypasstray"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayOnesheetbypass
+{
+    *Name: "Standardpages_inputtrayOnesheetbypass"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayFrontbypasstray
+{
+    *Name: "Standardpages_inputtrayFrontbypasstray"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: Standardpages_inputtrayLargecapacitytray
+{
+    *Name: "Standardpages_inputtrayLargecapacitytray"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: EnablecollatePrinter
+{
+    *Name: "EnablecollatePrinter"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: EnablecollateDriver
+{
+    *Name: "EnablecollateDriver"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: PrintableareaStandard
+{
+    *Name: "PrintableareaStandard"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: StapleConstraints
+{
+    *Name: "StapleConstraints"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+        *DisabledFeatures: LIST(Stapling)
+    }
+}
+*Feature: DuplexConstraints
+{
+    *Name: "DuplexConstraints"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: ON
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+        *DisabledFeatures: LIST(Duplex)
+    }
+}
+*Feature: EdgeToEdgeSupport
+{
+    *Name: "EdgeToEdgeSupport"
+    *FeatureType: PRINTER_PROPERTY
+*Ifdef: SUPPORT_PRINTABLEAREA
+    *DefaultOption: OFF
+*Else:
+    *DefaultOption: ON
+*Endif:
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+        *DisabledFeatures: LIST(PrintableArea)
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+        *DisabledFeatures: LIST(EdgeToEdgePrint)
+    }
+}
+*Feature: RewriteCheck
+{
+    *Name: "RewritChack"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: OFF
+    *ConcealFromUI?: TRUE
+    *Option: ON
+    {
+        *Name: "ON"
+    }
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+}
+*Feature: CustomMediatypeMax
+{
+    *Name: "CustomMediatypeMax"
+    *FeatureType: PRINTER_PROPERTY
+    *DefaultOption: 8
+    *ConcealFromUI?: TRUE
+    *Option: OFF
+    {
+        *Name: "OFF"
+    }
+    *Option: 8
+    {
+        *Name: "8"
+    }
+    *Option: 100
+    {
+        *Name: "100"
+    }
+}
+
+*InvalidCombination: LIST(DocumentsizeLegal.OFF, PaperSize.LEGAL)
+*InvalidCombination: LIST(DocumentsizeLetter.OFF, PaperSize.LETTER)
+*InvalidCombination: LIST(DocumentsizeExecutive.OFF, PaperSize.EXECUTIVE)
+*InvalidCombination: LIST(Documentsize5_5x8_5.OFF, PaperSize.STATEMENT)
+*InvalidCombination: LIST(DocumentsizeA4.OFF, PaperSize.A4)
+*InvalidCombination: LIST(DocumentsizeB5jis.OFF, PaperSize.B5)
+*InvalidCombination: LIST(DocumentsizeISOB5.OFF, PaperSize.ISOB5)
+*InvalidCombination: LIST(Documentsize12x18.OFF, PaperSize.12X18)
+*InvalidCombination: LIST(Documentsize11x17.OFF, PaperSize.11X17)
+*InvalidCombination: LIST(DocumentsizeA3.OFF, PaperSize.A3)
+*InvalidCombination: LIST(DocumentsizeA5.OFF, PaperSize.A5)
+*InvalidCombination: LIST(DocumentsizeA6.OFF, PaperSize.A6)
+*InvalidCombination: LIST(DocumentsizeB4jis.OFF, PaperSize.B4)
+*InvalidCombination: LIST(DocumentsizeB6.OFF, PaperSize.B6_JIS)
+*InvalidCombination: LIST(Documentsize8x13.OFF, PaperSize.8X13)
+*InvalidCombination: LIST(Documentsize8_25x13.OFF, PaperSize.8_25X13)
+*InvalidCombination: LIST(Documentsize8_5x13.OFF, PaperSize.FOLIO)
+*InvalidCombination: LIST(Documentsize8_5x13_4.OFF, PaperSize.8_5X13_4)
+*InvalidCombination: LIST(DocumentsizeCom10env.OFF, PaperSize.ENV_10)
+*InvalidCombination: LIST(DocumentsizeMonarchenv.OFF, PaperSize.ENV_MONARCH)
+*InvalidCombination: LIST(DocumentsizeDlenv.OFF, PaperSize.ENV_DL)
+*InvalidCombination: LIST(DocumentsizeC6env.OFF, PaperSize.ENV_C6)
+*InvalidCombination: LIST(DocumentsizeC5env.OFF, PaperSize.ENV_C5)
+*InvalidCombination: LIST(Documentsize8k.OFF, PaperSize.8kai)
+*InvalidCombination: LIST(Documentsize16k.OFF, PaperSize.16kai)
+*InvalidCombination: LIST(DocumentsizeSra3.OFF, PaperSize.320X450)
+*InvalidCombination: LIST(DocumentsizeSra4.OFF, PaperSize.225X320)
+*InvalidCombination: LIST(Documentsize8_5x12.OFF, PaperSize.FANFOLD_STD_GERMAN)
+*InvalidCombination: LIST(Documentsize226x310mm.OFF, PaperSize.226X310)
+*InvalidCombination: LIST(Documentsize310x432mm.OFF, PaperSize.310X432)
+*InvalidCombination: LIST(DocumentsizeCustompapersize.OFF, PaperSize.CUSTOMSIZE)
+*InvalidCombination: LIST(DocumentsizeB6half.OFF, PaperSize.JISB6Half)
+*InvalidCombination: LIST(DocumentsizeB7.OFF, PaperSize.B7)
+*InvalidCombination: LIST(DocumentsizePostcardstandard.OFF, PaperSize.PostcardStandard)
+*InvalidCombination: LIST(DocumentsizeBd.OFF, PaperSize.BD)
+*InvalidCombination: LIST(DocumentsizeLineslider1.OFF, PaperSize.LineSlider1)
+*InvalidCombination: LIST(DocumentsizeLineslider2.OFF, PaperSize.LineSlider2)
+*InvalidCombination: LIST(DocumentsizeGlt.OFF, PaperSize.8X10_5)
+*InvalidCombination: LIST(Documentsize11x14.OFF, PaperSize.11X14)
+*InvalidCombination: LIST(Documentsize13x19_2.OFF, PaperSize.13X19_2)
+*InvalidCombination: LIST(Documentsize13x19.OFF, PaperSize.13X19)
+*InvalidCombination: LIST(Documentsize12_6x19_2.OFF, PaperSize.12_6X19_2)
+*InvalidCombination: LIST(Documentsize12_6x18_5.OFF, PaperSize.12_6X18_5)
+*InvalidCombination: LIST(Documentsize13x18.OFF, PaperSize.13X18)
+*InvalidCombination: LIST(Documentsize10x15.OFF, PaperSize.10X15)
+*InvalidCombination: LIST(DocumentsizeKiku4.OFF, PaperSize.Kiku4)
+*InvalidCombination: LIST(Documentsize329x483mm.OFF, PaperSize.329X483)
+*InvalidCombination: LIST(DocumentsizeGovernmentlg.OFF, PaperSize.8_25X14)
+*InvalidCombination: LIST(DocumentsizeEngquatro.OFF, PaperSize.8x10)
+*InvalidCombination: LIST(Documentsize10x14.OFF, PaperSize.10X14)
+*InvalidCombination: LIST(Documentsize11x15.OFF, PaperSize.11X15)
+*InvalidCombination: LIST(Documentsize8_5x13_6.OFF, PaperSize.8_5x13_6)
+*InvalidCombination: LIST(Documentsize8_11x13_3.OFF, PaperSize.8_11x13_3)
+*InvalidCombination: LIST(DocumentsizeA5lef.OFF, PaperSize.A5_ROTATED)
+*Ifdef: EXP_MODEL
+*Else:
+*InvalidCombination: LIST(DocumentsizePostcard.OFF, PaperSize.JAPANESE_POSTCARD)
+*InvalidCombination: LIST(DocumentsizeDoublepostcard.OFF, PaperSize.DBL_JAPANESE_POSTCARD_ROTATED)
+*InvalidCombination: LIST(DocumentsizeDoublepostcardrotated.OFF, PaperSize.DBL_JAPANESE_POSTCARD)
+*InvalidCombination: LIST(DocumentsizeChou3jenv.OFF, PaperSize.JENV_CHOU3)
+*InvalidCombination: LIST(DocumentsizeChou4jenv.OFF, PaperSize.JENV_CHOU4)
+*InvalidCombination: LIST(DocumentsizeYouchou3jenv.OFF, PaperSize.YouChou3)
+*InvalidCombination: LIST(DocumentsizeYou4jenv.OFF, PaperSize.JENV_YOU4)
+*InvalidCombination: LIST(DocumentsizeKaku2jenv.OFF, PaperSize.JENV_KAKU2)
+*InvalidCombination: LIST(DocumentsizeKaku3jenv.OFF, PaperSize.JENV_KAKU3)
+*Endif:
+
+*InvalidCombination: LIST(Standardpages_mediatypePlainandrecycled.OFF, MediaType.Standard_Recycled)
+*InvalidCombination: LIST(Standardpages_mediatypePlain.OFF, MediaType.STANDARD)
+*InvalidCombination: LIST(Standardpages_mediatypeRecycled.OFF, MediaType.Recycled)
+*InvalidCombination: LIST(Standardpages_mediatypeLetterhead.OFF, MediaType.Letterhead)
+*InvalidCombination: LIST(Standardpages_mediatypePlain2.OFF, MediaType.Plain2)
+*InvalidCombination: LIST(Standardpages_mediatypeSpecial.OFF, MediaType.Special)
+*InvalidCombination: LIST(Standardpages_mediatypeSpecial2.OFF, MediaType.Special2)
+*InvalidCombination: LIST(Standardpages_mediatypeSpecial3.OFF, MediaType.Special3)
+*InvalidCombination: LIST(Standardpages_mediatypeSpecial4.OFF, MediaType.Special4)
+*InvalidCombination: LIST(Standardpages_mediatypeSpecial5.OFF, MediaType.Special5)
+*InvalidCombination: LIST(Standardpages_mediatypeMiddlethick.OFF, MediaType.MiddleThick)
+*InvalidCombination: LIST(Standardpages_mediatypeThick.OFF, MediaType.Thick)
+*InvalidCombination: LIST(Standardpages_mediatypeThick2.OFF, MediaType.Thick2)
+*InvalidCombination: LIST(Standardpages_mediatypeThick3.OFF, MediaType.Thick3)
+*InvalidCombination: LIST(Standardpages_mediatypeThick4.OFF, MediaType.Thick4)
+*InvalidCombination: LIST(Standardpages_mediatypeThin.OFF, MediaType.Thin)
+*InvalidCombination: LIST(Standardpages_mediatypeTransparency.OFF, MediaType.TRANSPARENCY)
+*InvalidCombination: LIST(Standardpages_mediatypeTranslucent.OFF, MediaType.Translucent)
+*InvalidCombination: LIST(Standardpages_mediatypeColor.OFF, MediaType.Color)
+*InvalidCombination: LIST(Standardpages_mediatypeColor1.OFF, MediaType.Color1)
+*InvalidCombination: LIST(Standardpages_mediatypeColor2.OFF, MediaType.Color2)
+*InvalidCombination: LIST(Standardpages_mediatypePreprinted.OFF, MediaType.Preprinted)
+*InvalidCombination: LIST(Standardpages_mediatypePrepunched.OFF, MediaType.Prepunched)
+*InvalidCombination: LIST(Standardpages_mediatypeLabels.OFF, MediaType.Labels)
+*InvalidCombination: LIST(Standardpages_mediatypeBond.OFF, MediaType.Bond)
+*InvalidCombination: LIST(Standardpages_mediatypeCardstock.OFF, MediaType.CardStock)
+*InvalidCombination: LIST(Standardpages_mediatypeTabstock.OFF, MediaType.TabStockPreCut)
+*InvalidCombination: LIST(Standardpages_mediatypeYellow.OFF, MediaType.Yellow)
+*InvalidCombination: LIST(Standardpages_mediatypeGreen.OFF, MediaType.Green)
+*InvalidCombination: LIST(Standardpages_mediatypeBlue.OFF, MediaType.Blue)
+*InvalidCombination: LIST(Standardpages_mediatypePurple.OFF, MediaType.Purple)
+*InvalidCombination: LIST(Standardpages_mediatypeIvory.OFF, MediaType.Ivory)
+*InvalidCombination: LIST(Standardpages_mediatypeOrange.OFF, MediaType.Orange)
+*InvalidCombination: LIST(Standardpages_mediatypePink.OFF, MediaType.Pink)
+*InvalidCombination: LIST(Standardpages_mediatypeRed.OFF, MediaType.Red)
+*InvalidCombination: LIST(Standardpages_mediatypeGray.OFF, MediaType.Gray)
+*InvalidCombination: LIST(Standardpages_mediatypeBlack.OFF, MediaType.Black)
+*InvalidCombination: LIST(Standardpages_mediatypeGlossy.OFF, MediaType.GLOSSY)
+*InvalidCombination: LIST(Standardpages_mediatypeGlossycoated.OFF, MediaType.GlossyCoated)
+*InvalidCombination: LIST(Standardpages_mediatypeMatcoated.OFF, MediaType.MatCoated)
+*InvalidCombination: LIST(Standardpages_mediatypeWaterproof.OFF, MediaType.WaterProof)
+*InvalidCombination: LIST(Standardpages_mediatypeHgplain.OFF, MediaType.HGPlain)
+*InvalidCombination: LIST(Standardpages_mediatypeEnvelope.OFF, MediaType.Envelope)
+*InvalidCombination: LIST(Standardpages_mediatypePostcard.OFF, MediaType.Jpost)
+*InvalidCombination: LIST(Standardpages_mediatypeInkjetpostcard.OFF, MediaType.InkjetJpost)
+*InvalidCombination: LIST(Standardpages_mediatypeCoated.OFF, MediaType.Coated)
+*InvalidCombination: LIST(Standardpages_mediatypeNcr.OFF, MediaType.NCR)
+*InvalidCombination: LIST(Standardpages_mediatypeSpecialp.OFF, MediaType.SpecialP)
+*InvalidCombination: LIST(Standardpages_mediatypeAuto.OFF, MediaType.Auto)
+*InvalidCombination: LIST(Standardpages_mediatypeSpecial6.OFF, MediaType.Special6)
+*InvalidCombination: LIST(Standardpages_mediatypePlainduplexbackside.OFF, MediaType.Plain_Duplex_Backside)
+*InvalidCombination: LIST(Standardpages_mediatypeThickduplexbackside.OFF, MediaType.Thick_Duplex_Backside)
+*InvalidCombination: LIST(Standardpages_mediatypeThick2duplexbackside.OFF, MediaType.Thick_Duplex_Backside2)
+*InvalidCombination: LIST(Standardpages_mediatypeThick3duplexbackside.OFF, MediaType.Thick_Duplex_Backside3)
+*InvalidCombination: LIST(Standardpages_mediatypeThick4duplexbackside.OFF, MediaType.Thick_Duplex_Backside4)
+*InvalidCombination: LIST(Standardpages_mediatypeGlossytabstock.OFF, MediaType.GlossyTabStock)
+*InvalidCombination: LIST(Standardpages_mediatypeMattabstock.OFF, MediaType.MatTabStock)
+*InvalidCombination: LIST(Standardpages_mediatypeMoreglossytabstock.OFF, MediaType.MoreGlossyTabStock)
+*InvalidCombination: LIST(Standardpages_mediatypeThickglossycoated.OFF, MediaType.ThickGlossyCoated)
+*InvalidCombination: LIST(Standardpages_mediatypeThickmatcoated.OFF, MediaType.ThickMatCoated)
+*InvalidCombination: LIST(Standardpages_mediatypeGlossyenvelope.OFF, MediaType.GlossyEnvelope)
+*InvalidCombination: LIST(Standardpages_mediatypeMatenvelope.OFF, MediaType.MatEnvelope)
+*InvalidCombination: LIST(Standardpages_mediatypeMoreglossyenvelope.OFF, MediaType.MoreGlossyEnvelope)
+*InvalidCombination: LIST(Standardpages_mediatypePostcardduplexbackside.OFF, MediaType.Jpost_Duplex_Backside)
+*InvalidCombination: LIST(Standardpages_mediatypeClearfile.OFF, MediaType.ClearFile)
+*InvalidCombination: LIST(Standardpages_mediatypeMagnet.OFF, MediaType.Magnet)
+*InvalidCombination: LIST(Standardpages_mediatypeMetallicpearl.OFF, MediaType.MetallicPearl)
+*InvalidCombination: LIST(Standardpages_mediatypeSynthetic.OFF, MediaType.Synthetic)
+*InvalidCombination: LIST(Standardpages_mediatypeTexture.OFF, MediaType.Texture)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom1)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom2)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom3)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom4)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom5)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom6)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom7)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom8)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom9)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom10)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom11)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom12)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom13)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom14)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom15)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom16)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom17)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom18)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom19)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom20)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom21)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom22)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom23)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom24)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom25)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom26)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom27)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom28)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom29)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom30)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom31)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom32)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom33)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom34)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom35)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom36)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom37)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom38)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom39)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom40)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom41)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom42)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom43)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom44)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom45)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom46)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom47)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom48)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom49)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom50)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom51)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom52)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom53)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom54)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom55)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom56)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom57)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom58)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom59)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom60)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom61)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom62)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom63)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom64)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom65)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom66)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom67)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom68)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom69)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom70)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom71)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom72)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom73)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom74)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom75)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom76)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom77)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom78)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom79)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom80)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom81)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom82)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom83)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom84)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom85)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom86)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom87)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom88)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom89)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom90)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom91)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom92)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom93)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom94)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom95)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom96)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom97)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom98)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom99)
+*InvalidCombination: LIST(CustomMediatypeMax.OFF, MediaType.Custom100)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom9)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom10)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom11)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom12)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom13)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom14)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom15)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom16)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom17)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom18)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom19)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom20)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom21)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom22)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom23)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom24)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom25)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom26)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom27)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom28)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom29)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom30)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom31)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom32)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom33)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom34)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom35)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom36)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom37)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom38)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom39)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom40)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom41)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom42)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom43)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom44)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom45)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom46)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom47)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom48)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom49)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom50)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom51)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom52)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom53)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom54)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom55)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom56)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom57)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom58)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom59)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom60)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom61)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom62)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom63)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom64)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom65)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom66)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom67)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom68)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom69)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom70)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom71)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom72)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom73)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom74)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom75)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom76)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom77)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom78)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom79)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom80)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom81)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom82)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom83)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom84)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom85)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom86)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom87)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom88)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom89)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom90)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom91)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom92)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom93)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom94)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom95)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom96)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom97)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom98)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom99)
+*InvalidCombination: LIST(CustomMediatypeMax.8, MediaType.Custom100)
+*InvalidCombination: LIST(ColorbwBlackandwhite.OFF, ColorMode.MONO)
+*InvalidCombination: LIST(ColorbwColor.OFF, ColorMode.RGB24BPP)
+*InvalidCombination: LIST(Resolution600.OFF, Resolution.600dpi)
+*InvalidCombination: LIST(Resolution1200.OFF, Resolution4800x1200.OFF, Resolution.1200dpi)
+*InvalidCombination: LIST(DuplexOff.OFF, Duplex.NONE)
+*InvalidCombination: LIST(DuplexLongedgeleftortop.OFF, Duplex.VERTICAL)
+*InvalidCombination: LIST(DuplexShortedgetoporleft.OFF, Duplex.HORIZONTAL)
+*InvalidCombination: LIST(Standardpages_inputtrayAutotrayselect.OFF, InputBin.AUTO)
+*InvalidCombination: LIST(Standardpages_inputtrayTray1.OFF, InputBin.Tray1)
+*InvalidCombination: LIST(Standardpages_inputtrayTray2.OFF, InputBin.Tray2)
+*InvalidCombination: LIST(Standardpages_inputtrayTray3.OFF, InputBin.Tray3)
+*InvalidCombination: LIST(Standardpages_inputtrayTray3lct.OFF, InputBin.Tray3_LCT)
+*InvalidCombination: LIST(Standardpages_inputtrayTray4.OFF, InputBin.Tray4)
+*InvalidCombination: LIST(Standardpages_inputtrayTray5.OFF, InputBin.Tray5)
+*InvalidCombination: LIST(Standardpages_inputtrayTray6.OFF, InputBin.Tray6)
+*InvalidCombination: LIST(Standardpages_inputtrayTray7.OFF, InputBin.Tray7)
+*InvalidCombination: LIST(Standardpages_inputtrayTray8.OFF, InputBin.Tray8)
+*InvalidCombination: LIST(Standardpages_inputtrayTray9.OFF, InputBin.Tray9)
+*InvalidCombination: LIST(Standardpages_inputtrayTray10.OFF, InputBin.Tray10)
+*InvalidCombination: LIST(Standardpages_inputtrayTray11.OFF, InputBin.Tray11)
+*InvalidCombination: LIST(Standardpages_inputtrayTraya.OFF, InputBin.TrayA)
+*InvalidCombination: LIST(Standardpages_inputtrayBypasstray.OFF, InputBin.BypassTray)
+*InvalidCombination: LIST(Standardpages_inputtrayOnesheetbypass.OFF, InputBin.OneSheetBypassTray)
+*InvalidCombination: LIST(Standardpages_inputtrayFrontbypasstray.OFF, InputBin.FrontBypassTray)
+*InvalidCombination: LIST(Standardpages_inputtrayLargecapacitytray.OFF, InputBin.LCT)
+*InvalidCombination: LIST(StapleOff.OFF, Stapling.OFF)
+*InvalidCombination: LIST(StapleTopleftslant.OFF, Stapling.TopLeftSlant)
+*InvalidCombination: LIST(StapleToprightslant.OFF, Stapling.TopRightSlant)
+*InvalidCombination: LIST(StapleTopleft.OFF, Stapling.TopLeft)
+*InvalidCombination: LIST(StapleTopright.OFF, Stapling.TopRight)
+*InvalidCombination: LIST(Staple2attop.OFF, Stapling.Top2)
+*InvalidCombination: LIST(Staple2atleft.OFF, Stapling.Left2)
+*InvalidCombination: LIST(Staple2atright.OFF, Stapling.Right2)
+*InvalidCombination: LIST(Staple2atcenter.OFF, Stapling.SaddleStitch)
+*InvalidCombination: LIST(StapleTopleftslantstapleless.OFF, Stapling.TopLeftSlantStapleless)
+*InvalidCombination: LIST(StapleToprightslantstapleless.OFF, Stapling.TopRightSlantStapleless)
+*InvalidCombination: LIST(PunchOff.OFF, Punching.OFF)
+*InvalidCombination: LIST(PunchLeft.OFF, Punching.Left)
+*InvalidCombination: LIST(PunchTop.OFF, Punching.Top)
+*InvalidCombination: LIST(PunchRight.OFF, Punching.Right)
+*InvalidCombination: LIST(Punch2atleft.OFF, Punching.Left2)
+*InvalidCombination: LIST(Punch2attop.OFF, Punching.Top2)
+*InvalidCombination: LIST(Punch2atright.OFF, Punching.Right2)
+*InvalidCombination: LIST(PunchMultiatleftortop.OFF, Punching.LeftOrTopMulti)
+*InvalidCombination: LIST(PunchMultiatrightortop.OFF, Punching.RightOrTopMulti)
+*Ifdef: EXP_MODEL
+*InvalidCombination: LIST(Punch3atleft.OFF, Punching.Left3)
+*InvalidCombination: LIST(Punch3attop.OFF, Punching.Top3)
+*InvalidCombination: LIST(Punch3atright.OFF, Punching.Right3)
+*InvalidCombination: LIST(Punch4atleft.OFF, Punching.Left4)
+*InvalidCombination: LIST(Punch4attop.OFF, Punching.Top4)
+*InvalidCombination: LIST(Punch4atright.OFF, Punching.Right4)
+*InvalidCombination: LIST(PunchMultiatleft.OFF, Punching.LeftMulti)
+*InvalidCombination: LIST(PunchMultiattop.OFF, Punching.TopMulti)
+*InvalidCombination: LIST(PunchMultiatright.OFF, Punching.RightMulti)
+*InvalidCombination: LIST(PunchDoubleatleftortop.OFF, Punching.LeftOrTopDouble)
+*InvalidCombination: LIST(PunchDoubleatrightortop.OFF, Punching.RightOrTopDouble)
+*Endif:
+*InvalidCombination: LIST(EnablecollatePrinter.OFF, EnablecollateDriver.OFF, Collate.ON)
+
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.TopLeftSlant)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.TopRightSlant)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.TopLeft)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.TopRight)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.Top2)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.Left2)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.Right2)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.SaddleStitch)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.TopLeftSlantStapleless)
+*InvalidCombination: LIST(StapleConstraints.OFF, Stapling.TopRightSlantStapleless)
+*InvalidCombination: LIST(DuplexConstraints.OFF, Duplex.VERTICAL)
+*InvalidCombination: LIST(DuplexConstraints.OFF, Duplex.HORIZONTAL)
+
+*%******************************************************************************
+*%                         Cursor Commands
+*%******************************************************************************
+*Command: CmdCR { *Cmd : "<0D>" }
+*Command: CmdLF { *Cmd : "<0A>" }
+*Command: CmdFF { *Cmd : "<0C>" }

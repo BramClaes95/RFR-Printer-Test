@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Filters>
+  <Filter    dll   = "r4600fxl.dll"
+             clsid = "{85B54CF3-84AB-4523-B093-8028BB2F93CC}"
+             name  = "RICOH XPS to PCL6 Filter">
+    <Input   guid  = "{b8cf8530-5562-47c4-ab67-b1f69ecf961e}" comment="IID_IXpsDocumentProvider"/>
+    <Output  guid  = "{65bb7f1b-371e-4571-8ac7-912f510c1a38}" comment="IID_IPrintWriteStream"/>
+  </Filter>
+
+  <OptionalFilterServiceProvider dll="XpsRasterService.dll"/>
+</Filters>
